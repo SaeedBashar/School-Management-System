@@ -1,0 +1,30 @@
+{
+  "version": "1.0",
+  "defaultProvider": "cdnjs",
+  "libraries": [
+    {
+      "library": "bootstrap@4.6.0",
+      "destination": "lib/bootstrap/"
+    },
+    {
+      "library": "font-awesome@5.15.3",
+      "destination": "lib/font-awesome/"
+    },
+    {
+      "library": "jquery-sidebar@3.3.2",
+      "destination": "lib/jquery-sidebar/"
+    },
+    {
+      "library": "feather-icons@4.28.0",
+      "destination": "lib/bootstrap/js/feather-icons/"
+    },
+    {
+      "library": "jquery@3.6.0",
+      "destination": "lib/bootstrap/js/jquery/"
+    },
+    {
+      "library": "json2@20160511",
+      "destination": "lib/bootstrap/js/json2/"
+    }
+  ]
+}
