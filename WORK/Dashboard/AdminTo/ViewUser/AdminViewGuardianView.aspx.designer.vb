@@ -95,6 +95,24 @@ Partial Public Class AdminViewGuardianView
     Protected WithEvents gward As Global.System.Web.UI.WebControls.TextBox
     
     '''<summary>
+    '''Label4 control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents Label4 As Global.System.Web.UI.WebControls.Label
+    
+    '''<summary>
+    '''numgd control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents numgd As Global.System.Web.UI.WebControls.TextBox
+    
+    '''<summary>
     '''GridView1 control.
     '''</summary>
     '''<remarks>

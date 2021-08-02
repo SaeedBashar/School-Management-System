@@ -12,6 +12,7 @@ Public Class AdminViewGuardianView
             gname.ReadOnly = True
             gphone.ReadOnly = True
             gward.ReadOnly = True
+            numgd.ReadOnly = True
             savebtn.Enabled = False
 
             Dim key As String = Request.QueryString("guardian_name")
@@ -41,6 +42,7 @@ Public Class AdminViewGuardianView
             GridView1.DataSource = dt
             GridView1.DataBind()
 
+            numgd.Text = dt.Rows.Count
             con.Close()
         Catch ex As Exception
             ClientScript.RegisterClientScriptBlock(Me.GetType(), "Failure", "<script type='text/javascript'>alert('An Error Occured!!');window.location='../AdminGuardianView.aspx';</script>")
@@ -51,6 +53,7 @@ Public Class AdminViewGuardianView
 
         gname.ReadOnly = False
         gphone.ReadOnly = False
+        numgd.ReadOnly = False
         savebtn.Enabled = True
 
 
@@ -60,6 +63,7 @@ Public Class AdminViewGuardianView
         Try
             gname.ReadOnly = True
             gphone.ReadOnly = True
+            numgd.ReadOnly = True
             editbtn.Enabled = False
 
             Dim key = Request.QueryString("guardian_name")

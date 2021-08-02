@@ -13,6 +13,7 @@ Public Class AdminViewCoursesView
             courseid.ReadOnly = True
             coursename.ReadOnly = True
             tutorid.ReadOnly = True
+            numstd.ReadOnly = True
             savebtn.Enabled = False
 
             Dim key As String = Request.QueryString("sub_id")
@@ -29,6 +30,7 @@ Public Class AdminViewCoursesView
                 courseid.Text = sdr("sub_id").ToString
                 coursename.Text = sdr("sub_name").ToString
                 tutorid.Text = sdr("Teacher_id").ToString
+
             End Using
 
 
@@ -52,6 +54,8 @@ Public Class AdminViewCoursesView
             GridView1.DataSource = dt
             GridView1.DataBind()
 
+            numstd.Text = dt.Rows.Count.ToString
+
             con.Close()
         Catch ex As Exception
             MsgBox(ex.Message.ToString)
@@ -63,6 +67,7 @@ Public Class AdminViewCoursesView
 
         coursename.ReadOnly = False
         tutorid.ReadOnly = False
+        numstd.ReadOnly = False
         savebtn.Enabled = True
 
 
@@ -72,6 +77,7 @@ Public Class AdminViewCoursesView
         Try
             coursename.ReadOnly = True
             tutorid.ReadOnly = True
+            numstd.ReadOnly = True
             editbtn.Enabled = False
 
             Dim key = Request.QueryString("guardian_name")

@@ -179,7 +179,7 @@
             </div>
             <div class="row m-auto pb-5" style="border-bottom: 1px solid #808080;">
                 <div class="col">
-                    <h3 style="width:50%;margin:auto;">Students Marks In This Course</h3>
+                    <h3 style="text-align:center;margin:10px auto;">Students Marks In This Course</h3>
                     <asp:GridView ID="GridView1" runat="server" CssClass="table table-hover  table-borderless m-auto"  style="border-radius:10px;" Width="80%">
                         <HeaderStyle BackColor="#3399FF" Font-Bold="True" ForeColor="White" />
                     </asp:GridView>

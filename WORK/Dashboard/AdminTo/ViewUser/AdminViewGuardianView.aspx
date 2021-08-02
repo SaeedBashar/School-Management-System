@@ -174,9 +174,17 @@
                     <asp:TextBox ID="gward" runat="server" CssClass="form-control"></asp:TextBox>
                 </div>
             </div>
+            <div class="row form-group p-3">
+                <div class="col-6">
+                    <asp:Label ID="Label4" runat="server" Text="Label">Number of Guardian</asp:Label>
+                </div>
+                <div class="col-6">
+                    <asp:TextBox ID="numgd" runat="server" CssClass="form-control"></asp:TextBox>
+                </div>
+            </div>
             <div class="row m-auto pb-5" style="border-bottom: 1px solid #808080;">
                 <div class="col">
-                    <h3 style="width:50%;margin:auto;">Guardian Child Table</h3>
+                    <h3 style="text-align:center;margin:10px auto;">Guardian Child Table</h3>
                     <asp:GridView ID="GridView1" runat="server" CssClass="table table-hover  table-borderless m-auto"  style="border-radius:10px;" Width="80%">
                         <HeaderStyle BackColor="#3399FF" Font-Bold="True" ForeColor="White" />
                     </asp:GridView>
