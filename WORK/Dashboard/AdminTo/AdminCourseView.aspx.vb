@@ -1,6 +1,11 @@
-﻿Public Class AdminCourseView
+﻿Imports System.Data
+Imports System.Configuration
+Imports System.Data.SqlClient
+
+Public Class AdminCourseView
     Inherits System.Web.UI.Page
 
+    Dim con As New SqlConnection("Data Source=DESKTOP-VPRF4HJ\SQLEXPRESS;Initial Catalog=SchoolManagement;Integrated Security=True")
     Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
 
     End Sub
@@ -9,5 +14,19 @@
         Dim id As String = GridView1.SelectedRow.Cells(0).Text
         'Session.Add("sub_id", id)
         Response.Redirect("ViewUser/AdminViewCoursesView.aspx?sub_id=" + id)
+    End Sub
+
+    Protected Sub delbtn_Click(sender As Object, e As EventArgs)
+        Dim cmd As New SqlCommand
+        Dim query As String = "delete from courses where sub_id='" & id_input.Value.Trim() & "'"
+
+        con.Open()
+        cmd.Connection = con
+        cmd.CommandText = query
+        Dim num = cmd.ExecuteNonQuery()
+        If num > 0 Then
+            ClientScript.RegisterClientScriptBlock(Me.GetType(), "Success", "<script type='text/javascript'>alert('Data Deleted Successfully');window.location=AdminCourseView.aspx;</script>")
+        End If
+        con.Close()
     End Sub
 End Class

@@ -27,13 +27,13 @@ Public Class AdminAddTutorView
         Dim cmd As New SqlCommand
         cmd.Connection = con
 
-        Dim query As String = "Insert into Tutors(fname, lname, mname, dob, gender, email, phone) values ('" & fname & "', '" & lname & "', '" & mname & "', '" & dob & "', '" & gender & "', '" & emailt & "', '" & contact & "')"
+        Dim query As String = "Insert into Tutors(fname, lname, mname, phone, email, dob, gender ) values ('" & fname & "', '" & lname & "', '" & mname & "', '" & contact & "', '" & emailt & "', '" & dob & "', '" & gender & "')"
         cmd.CommandText = query
-        cmd.ExecuteNonQuery()
+        suc1 = cmd.ExecuteNonQuery()
         Try
             query = "Insert into TutorPasswordTable(uname, pword) values ('" & uname & "', '" & pword & "')"
             cmd.CommandText = query
-            cmd.ExecuteNonQuery()
+            suc2 = cmd.ExecuteNonQuery()
 
             If suc1 > 0 And suc2 > 0 Then
                 ClientScript.RegisterClientScriptBlock(Me.GetType(), "Success", "<script type='text/javascript'>alert('Added Successfully'); window.location='../AdminTutorView.aspx'; </script>")

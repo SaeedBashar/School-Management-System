@@ -59,7 +59,7 @@
                                 <img src="../../lib/Assets/img/table_icons/card_bank.png" height="32" />
                                 Branch</a>
                             <a class="dropdown-item" href="Admin_teachers_view.aspx">
-                                <img src="../../lib/Assets/img/table_icons/blackboard_drawing.png" height="32" />
+                                <img src="../../lib/Assets/img/table_icons/blackboard_drawing.png" height="32"/>
                                 Teachers</a>
                             <a class="dropdown-item" href="Admin_subjects_view.aspx">
                                 <img src="../../lib/Assets/img/table_icons/books.png" height="32" />
@@ -161,8 +161,8 @@
                                     </li>
                                 </ul>
                                 <div class="form-inline my-2 my-lg-0">
-                                    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search"/>
-                                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                                    <input class="form-control mr-sm-2" runat="server" id="id_input" type="search" placeholder="Enter Id to Delete" aria-label="Search"/>
+                                    <button runat="server" id="delbtn"  onserverclick="delbtn_Click" class="btn btn-danger my-2 my-sm-0" type="button">Delete</button>
                                 </div>
                             </div>
                         </nav>
