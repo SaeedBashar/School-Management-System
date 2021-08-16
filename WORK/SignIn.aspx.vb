@@ -13,37 +13,37 @@ Public Class SignIn
         con.Open()
         If Statuslist.SelectedValue = 1 Then
 
-            query = "Select * from Adminpasswordtable where uname = '" & unametxt.Text & "' And pword = '" & pwordtxt.Text & "'"
+            query = "Select uname, pword,  fname, lname from Adminpasswordtable, administrator where uname = '" & unametxt.Text & "' And pword = '" & pwordtxt.Text & "'and adm_id = admin_id"
             cmd.CommandText = query
             cmd.Connection = con
             dr = cmd.ExecuteReader
-
+            dr.Read()
             If dr.HasRows Then
-                Response.Redirect("Dashboard/AdminDashboard.aspx")
+                Response.Redirect("Dashboard/AdminDashboard.aspx?admin_id=" + dr.GetSqlValue(2).ToString + " " + dr.GetSqlValue(3).ToString)
             Else
-                ClientScript.RegisterStartupScript(Me.GetType(), "", "Myfunc()", True)
+                ClientScript.RegisterClientScriptBlock(Me.GetType(), "Failure", "<script type='text/javascript'>alert('User name or password is invalid')</script>")
             End If
         ElseIf Statuslist.SelectedValue = 2 Then
-            query = "Select * from Tutorpasswordtable where uname = '" & unametxt.Text & "' And pword = '" & pwordtxt.Text & "'"
+            query = "Select uname,pword, fname, lname, tutor_id from Tutorpasswordtable, tutors where uname = '" & unametxt.Text & "' And pword = '" & pwordtxt.Text & "' and tutor_id = tut_id "
             cmd.CommandText = query
             cmd.Connection = con
             dr = cmd.ExecuteReader
-
+            dr.Read()
             If dr.HasRows Then
-                Response.Redirect("Dashboard/TutorDashboard.aspx")
+                Response.Redirect("Dashboard/TutorDashboard.aspx?tutor_name=" + dr.GetSqlValue(2).ToString + " " + dr.GetSqlValue(3).ToString + "&tutor_id=" + dr.GetSqlValue(4).ToString)
             Else
-                ClientScript.RegisterStartupScript(Me.GetType(), "", "Myfunc()", True)
+                ClientScript.RegisterClientScriptBlock(Me.GetType(), "Failure", "<script type='text/javascript'>alert('User name or password is invalid')</script>")
             End If
         Else
-            query = "Select * from Studentpasswordtable where uname = '" & unametxt.Text & "' And pword = '" & pwordtxt.Text & "'"
+            query = "Select uname,pword, fname,lname, student_id from StudentPasswordTable,students where uname = '" & unametxt.Text.Trim() & "' And pword = '" & pwordtxt.Text.Trim() & "' and std_id = student_id"
             cmd.CommandText = query
             cmd.Connection = con
             dr = cmd.ExecuteReader
-
+            dr.Read()
             If dr.HasRows Then
-                Response.Redirect("Dashboard/StudentDashboard.aspx")
+                Response.Redirect("Dashboard/StudentDashboard.aspx?std_name=" + dr.GetSqlValue(2).ToString + " " + dr.GetSqlValue(3).ToString + "&student_id=" + dr.GetSqlValue(4).ToString)
             Else
-                ClientScript.RegisterStartupScript(Me.GetType(), "", "Myfunc()", True)
+                ClientScript.RegisterClientScriptBlock(Me.GetType(), "Failure", "<script type='text/javascript'>alert('User name or password is invalid')</script>")
             End If
         End If
     End Sub

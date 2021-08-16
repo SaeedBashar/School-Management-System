@@ -64,8 +64,8 @@ Public Class AdminViewStudentView
         stdlname.ReadOnly = False
         stdmname.ReadOnly = False
         email.ReadOnly = False
-        fbal.ReadOnly = False
-        numstd.ReadOnly = False
+        fbal.ReadOnly = True
+        numstd.ReadOnly = True
         savebtn.Enabled = True
 
 

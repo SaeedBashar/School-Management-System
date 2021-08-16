@@ -38,13 +38,13 @@ Public Class AdminAddStudentView
             suc2 = cmd.ExecuteNonQuery()
 
             If suc1 > 0 And suc2 > 0 Then
-                ClientScript.RegisterClientScriptBlock(Me.GetType(), "Success", "<script type='text/javascript'>alert('Added Successfully!'); window.location='../AdminStudentView.aspx'; </script>")
+                ClientScript.RegisterClientScriptBlock(Me.GetType(), "Success", "<script type='text/javascript'>swal('Record added successfully!!'); window.location='../AdminStudentView.aspx'; </script>")
             Else
-                ClientScript.RegisterClientScriptBlock(Me.GetType(), "Failure", "<script type='text/javascript'>alert('An Error Occured!'); window.location='../AdminStudentView.aspx'; </script>")
+                ClientScript.RegisterClientScriptBlock(Me.GetType(), "Failure", "<script type='text/javascript'>swal('An Error occured, check and try again!'); window.location='../AdminStudentView.aspx'; </script>")
             End If
 
         Catch ex As Exception
-            MsgBox("Error")
+            ClientScript.RegisterClientScriptBlock(Me.GetType(), "failure", "<script>swal('An error occured, check and try again!!');</script>")
             Response.Redirect("../AdminStudentView.aspx")
         End Try
     End Sub

@@ -9,6 +9,8 @@
     <link href="../../lib/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
     <link href="../../lib/font-awesome/css/all.css" rel="stylesheet" />
     <link href="../../lib/Themify/themify-icons.css" rel="stylesheet" />
+     <link href="../../lib/bootstrap-sweetalert/sweetalert.min.css" rel="stylesheet" />
+    <script src="../../lib/bootstrap-sweetalert/sweetalert.min.js"></script>
 
     <title>EasyMan | Administrative Student View</title>
     <style>
@@ -140,47 +142,35 @@
                                     <li class="nav-item active">
                                         <a class="nav-link" onclick="MyPrint()" href="#">Print Preview <span class="sr-only">(current)</span></a>
                                     </li>
-                                    <li class="nav-item" style="padding-left:5px;padding-right:5px;padding-top: 7.5px;">
-                                        
-                                           <asp:DropDownList ID="DropDownList1" runat="server">
-                                              <asp:ListItem>5</asp:ListItem>
-                                              <asp:ListItem>10</asp:ListItem>
-                                              <asp:ListItem>15</asp:ListItem>
-                                           </asp:DropDownList>
-                                        
-                                    </li>
-                                    <li class="nav-item dropdown">
-                                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown
-                                        </a>
-                                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                            <a class="dropdown-item" href="#">Action</a>
-                                            <a class="dropdown-item" href="#">Another action</a>
-                                            <div class="dropdown-divider"></div>
-                                            <a class="dropdown-item" href="#">Something else here</a>
-                                        </div>
-                                    </li>
+                                    
                                 </ul>
-                                <div class="form-inline my-2 my-lg-0">
-                                    <input class="form-control mr-sm-2" runat="server" id="id_input" type="search" placeholder="Enter an Id to delete a record" aria-label="Search">
-                                    <button class="btn btn-danger my-2 my-sm-0" runat="server" id="delbtn" onserverclick="delbtn_ServerClick" type="submit">Search</button>
-                                </div>
+                                 <div class="form-inline my-2 my-lg-0">
+                                    <asp:TextBox ID="searchtxt" class="form-control mr-sm-2"  type="search" placeholder="search by first name" runat="server"></asp:TextBox>
+                                    
+                                    <button class="btn btn-primary my-2 my-sm-0" runat="server" id="BtnSearch"  onserverclick="BtnSearch_ServerClick" type="button">Search</button>
+                                   </div>
                             </div>
                         </nav>
                     </div>
                     <div class="card-body" style="height:auto">
-                        <asp:GridView ID="GridView1" runat="server" AllowPaging="True" AutoGenerateColumns="False" DataKeyNames="Tutor_id" DataSourceID="SqlDataSource1" PageSize="5" CssClass="table table-borderless table-hover" style="margin:auto;">
-                            <Columns>
-                                <asp:BoundField DataField="Fname" HeaderText="First Name" SortExpression="Fname" />
-                                <asp:BoundField DataField="lname" HeaderText="Last Name" SortExpression="lname" />
-                                <asp:BoundField DataField="Mname" HeaderText="Middle Name" SortExpression="Mname" />
-                                <asp:BoundField DataField="Tutor_id" HeaderText="Tutor Id" InsertVisible="False" ReadOnly="True" SortExpression="Tutor_id" />
-                                <asp:CommandField SelectText="Details" ShowSelectButton="True">
-                                <ControlStyle CssClass="btn btn-primary" />
-                                </asp:CommandField>
-                            </Columns>
-                            <HeaderStyle BackColor="#0066FF" ForeColor="White" />
+                         <asp:GridView ID="GridView1" runat="server" AllowPaging="true" PageSize="4" AutoGenerateColumns="false" 
+                            CssClass="table table-borderless table-hover" style="margin:auto;" DataKeyNames="tutor_id" >
+                                  <Columns>
+                                       <asp:BoundField DataField="tutor_id" HeaderText="Tutor Id" SortExpression="tutor_id" InsertVisible="False" ReadOnly="True" />                       
+                                       <asp:BoundField DataField="Fname" HeaderText="First Name" SortExpression="Fname" />
+                                      <asp:BoundField DataField="mname" HeaderText="Middle Name" SortExpression="mname" />
+                                      <asp:BoundField DataField="Lname" HeaderText="Last Name" SortExpression="Lname" />
+                                     
+                                      <asp:CommandField SelectText="Details" ShowSelectButton="True">
+                                          <ControlStyle CssClass="btn btn-primary" />
+                                     </asp:CommandField>
+                                       <asp:CommandField SelectText="Delete" ShowDeleteButton="true">
+                                          <ControlStyle CssClass="btn btn-danger" />
+                                     </asp:CommandField>
+                                  </Columns>
+                                 <HeaderStyle BackColor="#3399FF" ForeColor="White"   />
                         </asp:GridView>
-                        <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="Data Source=DESKTOP-VPRF4HJ\SQLEXPRESS;Initial Catalog=SchoolManagement;Integrated Security=True" ProviderName="System.Data.SqlClient" SelectCommand="SELECT [Fname], [lname], [Mname], [Tutor_id] FROM [Tutors]"></asp:SqlDataSource>
+                       
                     </div>
                     <div class="card-footer text-muted">
                         2 days ago

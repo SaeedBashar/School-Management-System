@@ -6,6 +6,8 @@
 <head runat="server">
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <link href="lib/bootstrap-sweetalert/sweetalert.min.css" rel="stylesheet" />
+    <script src="lib/bootstrap-sweetalert/sweetalert.min.js"></script>
 
     <title>EasyMan | Sign In Page</title>
     <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
@@ -114,7 +116,7 @@
     </div>
 
     <script src="lib/SweetAlert.js">   </script>
-    <script src="lib/jquery/jquery.slim.min.js"></script>
+    <script src="lib/jquery/jquery.slim.min.js"></script>b
     <script src="lib/bootstrap/js/bootstrap.bundle.min.js"></script>
     <script>
         function Myfunc() {

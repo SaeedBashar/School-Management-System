@@ -36,12 +36,13 @@ Public Class AdminAddTutorView
             suc2 = cmd.ExecuteNonQuery()
 
             If suc1 > 0 And suc2 > 0 Then
-                ClientScript.RegisterClientScriptBlock(Me.GetType(), "Success", "<script type='text/javascript'>alert('Added Successfully'); window.location='../AdminTutorView.aspx'; </script>")
+                ClientScript.RegisterClientScriptBlock(Me.GetType(), "Success", "<script type='text/javascript'>swal('Record added Successfully!!'); window.location='../AdminTutorView.aspx'; </script>")
             Else
-                ClientScript.RegisterClientScriptBlock(Me.GetType(), "Failure", "<script type='text/javascript'>alert('An Error Occured'); window.location='../AdminTutorView.aspx'; </script>")
+                ClientScript.RegisterClientScriptBlock(Me.GetType(), "Failure", "<script type='text/javascript'>swal('An Error Occured!!'); window.location='../AdminTutorView.aspx'; </script>")
             End If
         Catch ex As Exception
             MsgBox("Error")
+            ClientScript.RegisterClientScriptBlock(Me.GetType(), "failuer", "<scrip>swal('An Error Occured!!');</script>")
             Response.Redirect("../AdminTutorView.aspx")
         End Try
     End Sub

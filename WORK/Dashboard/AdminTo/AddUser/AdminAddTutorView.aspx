@@ -9,6 +9,9 @@
     <link href="../../../lib/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
     <link href="../../../lib/font-awesome/css/all.min.css" rel="stylesheet" />
     <link href="../../../lib/Themify/themify-icons.css" rel="stylesheet" />
+    <link href="../../../lib/bootstrap-sweetalert/sweetalert.min.css" rel="stylesheet" />
+    <script src="../../../lib/bootstrap-sweetalert/sweetalert.min.js"></script>
+
     <title>EasyMan | Admin Add New Tutor</title>
 </head>
 <body style="background-color: #dbd3d3;">

@@ -93,6 +93,9 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Dashboard\AdminDashboard.aspx" />
+    <Content Include="Dashboard\AdminTo\AddUser\AdminAddCourseView.aspx" />
+    <Content Include="Dashboard\AdminTo\AddUser\AdminAddGuardianView.aspx" />
+    <Content Include="Dashboard\AdminTo\AddUser\AdminAddHallView.aspx" />
     <Content Include="Dashboard\AdminTo\AddUser\AdminAddProgramView.aspx" />
     <Content Include="Dashboard\AdminTo\AddUser\AdminAddStudentView.aspx" />
     <Content Include="Dashboard\AdminTo\AddUser\AdminAddTutorView.aspx" />
@@ -112,7 +115,17 @@
     <Content Include="Dashboard\AdminTo\ViewUser\AdminViewStudentView.aspx" />
     <Content Include="Dashboard\AdminTo\ViewUser\AdminViewTutorView.aspx" />
     <Content Include="Dashboard\StudentDashboard.aspx" />
+    <Content Include="Dashboard\StudentTo\StudentProfileView.aspx" />
+    <Content Include="Dashboard\StudentTo\ViewCourse\ViewBiologyCourse.aspx" />
+    <Content Include="Dashboard\StudentTo\ViewCourse\ViewChemistryCourse.aspx" />
+    <Content Include="Dashboard\StudentTo\ViewCourse\ViewCoreMathCourse.aspx" />
+    <Content Include="Dashboard\StudentTo\ViewCourse\ViewElectiveMathCourse.aspx" />
+    <Content Include="Dashboard\StudentTo\ViewCourse\ViewEnglishCourse.aspx" />
+    <Content Include="Dashboard\StudentTo\ViewCourse\ViewInterScienceCourse.aspx" />
+    <Content Include="Dashboard\StudentTo\ViewCourse\ViewPhysicsCourse.aspx" />
+    <Content Include="Dashboard\StudentTo\ViewCourse\ViewSocialStudiesCourse.aspx" />
     <Content Include="Dashboard\TutorDashboard.aspx" />
+    <Content Include="Dashboard\TutorTo\TutorProfileView.aspx" />
     <Content Include="lib\Assets\collections\futurelead.jpg" />
     <Content Include="lib\Assets\collections\images %281%29.jpeg" />
     <Content Include="lib\Assets\collections\images %281%29.png" />
@@ -150,6 +163,10 @@
     <Content Include="lib\Assets\img\table_icons\guardian.png" />
     <Content Include="lib\Assets\img\table_icons\house2.png" />
     <Content Include="lib\Assets\img\table_icons\student2.png" />
+    <Content Include="lib\bootstrap-sweetalert\sweetalert.css" />
+    <Content Include="lib\bootstrap-sweetalert\sweetalert.js" />
+    <Content Include="lib\bootstrap-sweetalert\sweetalert.min.css" />
+    <Content Include="lib\bootstrap-sweetalert\sweetalert.min.js" />
     <Content Include="lib\bootstrap\css\bootstrap-grid.css" />
     <Content Include="lib\bootstrap\css\bootstrap-grid.min.css" />
     <Content Include="lib\bootstrap\css\bootstrap-reboot.css" />
@@ -252,6 +269,27 @@
     </Compile>
     <Compile Include="Dashboard\AdminDashboard.aspx.vb">
       <DependentUpon>AdminDashboard.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Dashboard\AdminTo\AddUser\AdminAddCourseView.aspx.designer.vb">
+      <DependentUpon>AdminAddCourseView.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Dashboard\AdminTo\AddUser\AdminAddCourseView.aspx.vb">
+      <DependentUpon>AdminAddCourseView.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Dashboard\AdminTo\AddUser\AdminAddGuardianView.aspx.designer.vb">
+      <DependentUpon>AdminAddGuardianView.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Dashboard\AdminTo\AddUser\AdminAddGuardianView.aspx.vb">
+      <DependentUpon>AdminAddGuardianView.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Dashboard\AdminTo\AddUser\AdminAddHallView.aspx.designer.vb">
+      <DependentUpon>AdminAddHallView.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Dashboard\AdminTo\AddUser\AdminAddHallView.aspx.vb">
+      <DependentUpon>AdminAddHallView.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
     <Compile Include="Dashboard\AdminTo\AddUser\AdminAddProgramView.aspx.designer.vb">
@@ -387,11 +425,82 @@
       <DependentUpon>StudentDashboard.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
+    <Compile Include="Dashboard\StudentTo\StudentProfileView.aspx.designer.vb">
+      <DependentUpon>StudentProfileView.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Dashboard\StudentTo\StudentProfileView.aspx.vb">
+      <DependentUpon>StudentProfileView.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Dashboard\StudentTo\ViewCourse\CodeFile1.vb" />
+    <Compile Include="Dashboard\StudentTo\ViewCourse\ViewBiologyCourse.aspx.designer.vb">
+      <DependentUpon>ViewBiologyCourse.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Dashboard\StudentTo\ViewCourse\ViewBiologyCourse.aspx.vb">
+      <DependentUpon>ViewBiologyCourse.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Dashboard\StudentTo\ViewCourse\ViewChemistryCourse.aspx.designer.vb">
+      <DependentUpon>ViewChemistryCourse.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Dashboard\StudentTo\ViewCourse\ViewChemistryCourse.aspx.vb">
+      <DependentUpon>ViewChemistryCourse.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Dashboard\StudentTo\ViewCourse\ViewCoreMathCourse.aspx.designer.vb">
+      <DependentUpon>ViewCoreMathCourse.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Dashboard\StudentTo\ViewCourse\ViewCoreMathCourse.aspx.vb">
+      <DependentUpon>ViewCoreMathCourse.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Dashboard\StudentTo\ViewCourse\ViewElectiveMathCourse.aspx.designer.vb">
+      <DependentUpon>ViewElectiveMathCourse.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Dashboard\StudentTo\ViewCourse\ViewElectiveMathCourse.aspx.vb">
+      <DependentUpon>ViewElectiveMathCourse.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Dashboard\StudentTo\ViewCourse\ViewEnglishCourse.aspx.designer.vb">
+      <DependentUpon>ViewEnglishCourse.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Dashboard\StudentTo\ViewCourse\ViewEnglishCourse.aspx.vb">
+      <DependentUpon>ViewEnglishCourse.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Dashboard\StudentTo\ViewCourse\ViewInterScienceCourse.aspx.designer.vb">
+      <DependentUpon>ViewInterScienceCourse.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Dashboard\StudentTo\ViewCourse\ViewInterScienceCourse.aspx.vb">
+      <DependentUpon>ViewInterScienceCourse.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Dashboard\StudentTo\ViewCourse\ViewPhysicsCourse.aspx.designer.vb">
+      <DependentUpon>ViewPhysicsCourse.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Dashboard\StudentTo\ViewCourse\ViewPhysicsCourse.aspx.vb">
+      <DependentUpon>ViewPhysicsCourse.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Dashboard\StudentTo\ViewCourse\ViewSocialStudiesCourse.aspx.designer.vb">
+      <DependentUpon>ViewSocialStudiesCourse.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Dashboard\StudentTo\ViewCourse\ViewSocialStudiesCourse.aspx.vb">
+      <DependentUpon>ViewSocialStudiesCourse.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
     <Compile Include="Dashboard\TutorDashboard.aspx.designer.vb">
       <DependentUpon>TutorDashboard.aspx</DependentUpon>
     </Compile>
     <Compile Include="Dashboard\TutorDashboard.aspx.vb">
       <DependentUpon>TutorDashboard.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Dashboard\TutorTo\TutorProfileView.aspx.designer.vb">
+      <DependentUpon>TutorProfileView.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Dashboard\TutorTo\TutorProfileView.aspx.vb">
+      <DependentUpon>TutorProfileView.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
@@ -601,6 +710,7 @@
     <Content Include="lib\Assets\collections\virtual-learning-environment-thoughtful-male-260nw-404877145.webp" />
     <Content Include="lib\Assets\collections\wealth-management-concept-business-man-260nw-1439150750.webp" />
     <Content Include="lib\Assets\collections\young-business-school-student-working-260nw-697612099.webp" />
+    <Content Include="lib\bootstrap-sweetalert\sweetalert.min.css.map" />
     <None Include="My Project\Application.myapp">
       <Generator>MyApplicationCodeGenerator</Generator>
       <LastGenOutput>Application.Designer.vb</LastGenOutput>

@@ -40,7 +40,7 @@ Public Class AdminViewCoursesView
                 query = "select std_id as 'Student Id', class_work as 'Class Work', mid_term as 'Mid Term', end_term as 'End Term' from english "
             ElseIf CType(key, Integer) = 201 Then
                 query = "select std_id as 'Student Id', class_work as 'Class Work', mid_term as 'Mid Term', end_term as 'End Term' from Core_mathematics"
-            ElseIf CType(key, Integer) Then
+            ElseIf CType(key, Integer) = 202 Then
                 query = "select std_id as 'Student Id', class_work as 'Class Work', mid_term as 'Mid Term', end_term as 'End Term' from inter_science "
             Else
                 query = "select std_id as 'Student Id', class_work as 'Class Work', mid_term as 'Mid Term', end_term as 'End Term' from social_studies "

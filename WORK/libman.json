@@ -25,6 +25,10 @@
     {
       "library": "json2@20160511",
       "destination": "lib/bootstrap/js/json2/"
+    },
+    {
+      "library": "bootstrap-sweetalert@1.0.1",
+      "destination": "lib/bootstrap-sweetalert/"
     }
   ]
 }

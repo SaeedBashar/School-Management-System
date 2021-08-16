@@ -367,7 +367,7 @@
                             <div class="row">
                                 <div class="col-sm-4">
                                     <ul class="footer-list-top">
-                                        <li>
+                                        <li style="list-style-type: none;">
                                             <h4 class="footer-list-header">About EasyMan</h4>
                                         </li>
                                         <li><a href='#' class="generic-anchor footer-list-anchor" itemprop="significantLink">GET TO KNOW US</a></li>
@@ -381,21 +381,21 @@
                                 </div>
                                 <div class="col-sm-4">
                                     <ul class="footer-list-top">
-                                        <li>
+                                        <li style="list-style-type: none;">
                                             <h4 class="footer-list-header">The Gift Selection</h4>
                                         </li>
 
 
-                                        <li><a href='#' class="generic-anchor footer-list-anchor">ANGEL FIGURINES</a></li>
-                                        <li><a href='#' class="generic-anchor footer-list-anchor">HOME DECOR</a></li>
-                                        <li><a href='#' class="generic-anchor footer-list-anchor">MUGS</a></li>
-                                        <li><a href='#' class="generic-anchor footer-list-anchor">PET LOVER</a></li>
-                                        <li><a href='#' class="generic-anchor footer-list-anchor" target="_blank">HANDBAGS & JEWELRY</a></li>
+                                        <li><a href='#' class="generic-anchor footer-list-anchor">ADMISSION PORTAL</a></li>
+                                        <li><a href='#' class="generic-anchor footer-list-anchor">EDUCATION RESOURCES</a></li>
+                                        <li><a href='#' class="generic-anchor footer-list-anchor">STUDENT MAIL</a></li>
+                                        <li><a href='#' class="generic-anchor footer-list-anchor">HELP DESK</a></li>
+                                        <li><a href='#' class="generic-anchor footer-list-anchor" target="_blank">WHAT DO YOU THINK</a></li>
                                     </ul>
                                 </div>
                                 <div class="col-sm-4">
                                     <ul class="footer-list-top">
-                                        <li id='help'>
+                                        <li id='help' style="list-style-type: none;">
                                             <h4 class="footer-list-header">SUPPORT</h4>
                                         </li>
                                         <li><a href='#' class="generic-anchor footer-list-anchor" itemprop="significantLink">CONTACT</a></li>

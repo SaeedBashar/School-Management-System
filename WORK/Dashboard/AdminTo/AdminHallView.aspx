@@ -9,6 +9,8 @@
     <link href="../../lib/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
     <link href="../../lib/font-awesome/css/all.css" rel="stylesheet" />
     <link href="../../lib/Themify/themify-icons.css" rel="stylesheet" />
+    <link href="../../lib/bootstrap-sweetalert/sweetalert.min.css" rel="stylesheet" />
+    <script src="../../lib/bootstrap-sweetalert/sweetalert.min.js"></script>
 
     <title>EasyMan | Administrative Hall View</title>
     <style>
@@ -128,7 +130,7 @@
                 <div class="card text-center">
                     <div class="card-header">
                         <nav class="navbar navbar-expand-lg navbar-light bg-light">
-                            <a class="navbar-brand" href="../../SignUp/StudentSignUp.aspx" style="background-color:#2ec42d;padding: 1px 5px;border-radius:4px;">
+                            <a class="navbar-brand" href="AddUser/AdminAddHallView.aspx" style="background-color:#2ec42d;padding: 1px 5px;border-radius:4px;">
                                 <span class=" ti-plus" style="color:blue;"></span>
                                 Add New
                             </a>
@@ -140,47 +142,36 @@
                                     <li class="nav-item active">
                                         <a class="nav-link" onclick="MyPrint()" href="#">Print Preview <span class="sr-only">(current)</span></a>
                                     </li>
-                                    <li class="nav-item" style="padding-left:5px;padding-right:5px;padding-top: 7.5px;">
-                                        
-                                           <asp:DropDownList ID="DropDownList1" runat="server">
-                                              <asp:ListItem>5</asp:ListItem>
-                                              <asp:ListItem>10</asp:ListItem>
-                                              <asp:ListItem>15</asp:ListItem>
-                                           </asp:DropDownList>
-                                        
-                                    </li>
-                                    <li class="nav-item dropdown">
-                                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown
-                                        </a>
-                                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                            <a class="dropdown-item" href="#">Action</a>
-                                            <a class="dropdown-item" href="#">Another action</a>
-                                            <div class="dropdown-divider"></div>
-                                            <a class="dropdown-item" href="#">Something else here</a>
-                                        </div>
-                                    </li>
+                                   
                                 </ul>
-                                <div class="form-inline my-2 my-lg-0">
-                                    <input class="form-control mr-sm-2" runat="server" id="id_input" type="search" placeholder="Enter a house Id to delete" aria-label="Search"/>
-                                    <button runat="server" id="delbtn" onserverclick="delbtn_ServerClick" class="btn btn-danger my-2 my-sm-0" type="submit">Search</button>
-                                </div>
+                               <div class="form-inline my-2 my-lg-0">
+                                       <asp:TextBox ID="searchtxt" class="form-control mr-sm-2" OnTextChanged="searchtxt_TextChanged" type="search" placeholder="search by name" runat="server"></asp:TextBox>
+                                    
+                                    <button class="btn btn-primary my-2 my-sm-0" runat="server" id="BtnSearch"  onserverclick="BtnSearch_ServerClick" type="button">Search</button>
+                                   </div>
                             </div>
                         </nav>
                     </div>
                     <div class="card-body" style="height:auto;">
-                        <asp:GridView ID="GridView1" runat="server" AllowPaging="True" AutoGenerateColumns="False" PageSize="3" CssClass="table table-hover table-borderless" DataKeyNames="House_id" DataSourceID="SqlDataSource1">
-                            <Columns>
-                                <asp:BoundField DataField="House_id" HeaderText="House Id" InsertVisible="False" ReadOnly="True" SortExpression="House_id" />
-                                <asp:BoundField DataField="House_name" HeaderText="House Name" SortExpression="House_name" />
-                                <asp:BoundField DataField="House_master_id" HeaderText="House Master Id " SortExpression="House_master_id" />
-                                <asp:CommandField SelectText="Details" ShowSelectButton="True" />
-                            </Columns>
-                            <HeaderStyle BackColor="#3399FF" ForeColor="White" Width="80%" Font-Bold="True" />
+                       <asp:GridView ID="GridView1" runat="server" AllowPaging="true" PageSize="4" AutoGenerateColumns="false" 
+                            CssClass="table table-borderless table-hover" style="margin:auto;" DataKeyNames="house_id" >
+                                  <Columns>
+                                       <asp:BoundField DataField="house_id" HeaderText="Hall Id" SortExpression="House_id" InsertVisible="False" ReadOnly="True" />                       
+                                       <asp:BoundField DataField="house_name" HeaderText="Hall Name" SortExpression="house_name" />
+                                      <asp:BoundField DataField="House_master_id" HeaderText="House Master Id" SortExpression="house_master_id" />
+                                     
+                                      <asp:CommandField SelectText="Details" ShowSelectButton="True">
+                                          <ControlStyle CssClass="btn btn-primary" />
+                                     </asp:CommandField>
+                                       <asp:CommandField SelectText="Delete" ShowDeleteButton="true">
+                                          <ControlStyle CssClass="btn btn-danger" />
+                                     </asp:CommandField>
+                                  </Columns>
+                                 <HeaderStyle BackColor="#3399FF" ForeColor="White"   />
                         </asp:GridView>
-                        <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="Data Source=DESKTOP-VPRF4HJ\SQLEXPRESS;Initial Catalog=SchoolManagement;Integrated Security=True" ProviderName="System.Data.SqlClient" SelectCommand="SELECT * FROM [Houses]"></asp:SqlDataSource>
                     </div>
                     <div class="card-footer text-muted">
-                        2 days ago
+                        
                     </div>
                 </div>
             </div>
