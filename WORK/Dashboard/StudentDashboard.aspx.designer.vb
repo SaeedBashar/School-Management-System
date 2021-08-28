@@ -41,6 +41,15 @@ Partial Public Class StudentDashboard
     Protected WithEvents toprofile As Global.System.Web.UI.HtmlControls.HtmlAnchor
     
     '''<summary>
+    '''signout control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents signout As Global.System.Web.UI.HtmlControls.HtmlAnchor
+    
+    '''<summary>
     '''engview control.
     '''</summary>
     '''<remarks>
@@ -138,4 +147,13 @@ Partial Public Class StudentDashboard
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents loguname As Global.System.Web.UI.HtmlControls.HtmlAnchor
+    
+    '''<summary>
+    '''blogout control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents blogout As Global.System.Web.UI.HtmlControls.HtmlAnchor
 End Class

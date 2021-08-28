@@ -46,6 +46,24 @@ Auto-generated field.
 To modify move field declaration from designer file to code-behind file.
 </remarks>
 </member>
+<member name="F:WORK.AdminDashboard._signout">
+<summary>
+signout control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:WORK.AdminDashboard._adminArea">
+<summary>
+adminArea control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
 <member name="F:WORK.AdminDashboard._GridView1">
 <summary>
 GridView1 control.
@@ -73,6 +91,33 @@ Auto-generated field.
 To modify move field declaration from designer file to code-behind file.
 </remarks>
 </member>
+<member name="F:WORK.AdminAddCourseView._snametxt">
+<summary>
+snametxt control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:WORK.AdminAddCourseView._tutidtxt">
+<summary>
+tutidtxt control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:WORK.AdminAddCourseView._submitbtn">
+<summary>
+submitbtn control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
 <member name="F:WORK.AdminAddGuardianView._form1">
 <summary>
 form1 control.
@@ -91,9 +136,63 @@ Auto-generated field.
 To modify move field declaration from designer file to code-behind file.
 </remarks>
 </member>
+<member name="F:WORK.AdminAddHallView._hnametxt">
+<summary>
+hnametxt control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:WORK.AdminAddHallView._tutidtxt">
+<summary>
+tutidtxt control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:WORK.AdminAddHallView._submitbtn">
+<summary>
+submitbtn control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
 <member name="F:WORK.AdminAddProgramView._form1">
 <summary>
 form1 control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:WORK.AdminAddProgramView._pnametxt">
+<summary>
+pnametxt control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:WORK.AdminAddProgramView._tutidtxt">
+<summary>
+tutidtxt control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:WORK.AdminAddProgramView._submitbtn">
+<summary>
+submitbtn control.
 </summary>
 <remarks>
 Auto-generated field.
@@ -325,9 +424,72 @@ Auto-generated field.
 To modify move field declaration from designer file to code-behind file.
 </remarks>
 </member>
-<member name="F:WORK.AdminAnnouncementView._DropDownList1">
+<member name="F:WORK.AdminAnnouncementView._form1">
 <summary>
-DropDownList1 control.
+form1 control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:WORK.AdminAnnouncementView._anninp">
+<summary>
+anninp control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:WORK.AdminAnnouncementView._delann">
+<summary>
+delann control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:WORK.AdminAnnouncementView._GridView1">
+<summary>
+GridView1 control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:WORK.AdminAnnouncementView._SqlDataSource1">
+<summary>
+SqlDataSource1 control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:WORK.AdminAnnouncementView._queHead">
+<summary>
+queHead control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:WORK.AdminAnnouncementView._queBody">
+<summary>
+queBody control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:WORK.AdminAnnouncementView._submitAnn">
+<summary>
+submitAnn control.
 </summary>
 <remarks>
 Auto-generated field.
@@ -337,6 +499,96 @@ To modify move field declaration from designer file to code-behind file.
 <member name="F:WORK.AdminArea._form1">
 <summary>
 form1 control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:WORK.AdminArea._cuser">
+<summary>
+cuser control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:WORK.AdminArea._editbtn">
+<summary>
+editbtn control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:WORK.AdminArea._savebtn">
+<summary>
+savebtn control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:WORK.AdminArea._unametxt">
+<summary>
+unametxt control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:WORK.AdminArea._dobtxt">
+<summary>
+dobtxt control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:WORK.AdminArea._emailtxt">
+<summary>
+emailtxt control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:WORK.AdminArea._stdidtxt">
+<summary>
+stdidtxt control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:WORK.AdminArea._gnametxt">
+<summary>
+gnametxt control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:WORK.AdminArea._gcontacttxt">
+<summary>
+gcontacttxt control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:WORK.AdminArea._loguname">
+<summary>
+loguname control.
 </summary>
 <remarks>
 Auto-generated field.
@@ -379,18 +631,63 @@ Auto-generated field.
 To modify move field declaration from designer file to code-behind file.
 </remarks>
 </member>
-<member name="F:WORK.AdminEventView._searchtxt">
+<member name="F:WORK.AdminEventView._eventinp">
 <summary>
-searchtxt control.
+eventinp control.
 </summary>
 <remarks>
 Auto-generated field.
 To modify move field declaration from designer file to code-behind file.
 </remarks>
 </member>
-<member name="F:WORK.AdminEventView._BtnSearch">
+<member name="F:WORK.AdminEventView._delEvent">
 <summary>
-BtnSearch control.
+delEvent control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:WORK.AdminEventView._GridView1">
+<summary>
+GridView1 control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:WORK.AdminEventView._SqlDataSource1">
+<summary>
+SqlDataSource1 control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:WORK.AdminEventView._queHead">
+<summary>
+queHead control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:WORK.AdminEventView._queBody">
+<summary>
+queBody control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:WORK.AdminEventView._submitAnn">
+<summary>
+submitAnn control.
 </summary>
 <remarks>
 Auto-generated field.
@@ -1333,6 +1630,15 @@ Auto-generated field.
 To modify move field declaration from designer file to code-behind file.
 </remarks>
 </member>
+<member name="F:WORK.StudentDashboard._signout">
+<summary>
+signout control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
 <member name="F:WORK.StudentDashboard._engview">
 <summary>
 engview control.
@@ -1426,6 +1732,15 @@ To modify move field declaration from designer file to code-behind file.
 <member name="F:WORK.StudentDashboard._loguname">
 <summary>
 loguname control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:WORK.StudentDashboard._blogout">
+<summary>
+blogout control.
 </summary>
 <remarks>
 Auto-generated field.
@@ -1531,6 +1846,168 @@ Auto-generated field.
 To modify move field declaration from designer file to code-behind file.
 </remarks>
 </member>
+<member name="F:WORK.ViewAssignment._form1">
+<summary>
+form1 control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:WORK.ViewAssignment._cid">
+<summary>
+cid control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:WORK.ViewAssignment._cname">
+<summary>
+cname control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:WORK.ViewAssignment._tname">
+<summary>
+tname control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:WORK.ViewAssignment._tit">
+<summary>
+tit control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:WORK.ViewAssignment._cont">
+<summary>
+cont control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:WORK.ViewAssignment._Div1">
+<summary>
+Div1 control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:WORK.ViewAssignment._Div2">
+<summary>
+Div2 control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:WORK.ViewAssignment._Div3">
+<summary>
+Div3 control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:WORK.ViewAssignment._fileup">
+<summary>
+fileup control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:WORK.ViewAssignment._btnSubmit">
+<summary>
+btnSubmit control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:WORK.ViewAssignment._Label1">
+<summary>
+Label1 control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:WORK.ViewAssignment._Div4">
+<summary>
+Div4 control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:WORK.ViewAssignment._Div5">
+<summary>
+Div5 control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:WORK.ViewAssignment._editsubbtn">
+<summary>
+editsubbtn control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:WORK.ViewAssignment._Div6">
+<summary>
+Div6 control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:WORK.ViewAssignment._textEditor">
+<summary>
+textEditor control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:WORK.ViewAssignment._loguname">
+<summary>
+loguname control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
 <member name="F:WORK.ViewBiologyCourse._form1">
 <summary>
 form1 control.
@@ -1561,6 +2038,15 @@ To modify move field declaration from designer file to code-behind file.
 <member name="F:WORK.ViewBiologyCourse._tname">
 <summary>
 tname control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:WORK.ViewBiologyCourse._AsCont">
+<summary>
+AsCont control.
 </summary>
 <remarks>
 Auto-generated field.
@@ -1612,6 +2098,15 @@ Auto-generated field.
 To modify move field declaration from designer file to code-behind file.
 </remarks>
 </member>
+<member name="F:WORK.ViewChemistryCourse._AsCont">
+<summary>
+AsCont control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
 <member name="F:WORK.ViewChemistryCourse._loguname">
 <summary>
 loguname control.
@@ -1657,6 +2152,15 @@ Auto-generated field.
 To modify move field declaration from designer file to code-behind file.
 </remarks>
 </member>
+<member name="F:WORK.ViewCoreMathCourse._AsCont">
+<summary>
+AsCont control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
 <member name="F:WORK.ViewCoreMathCourse._loguname">
 <summary>
 loguname control.
@@ -1696,6 +2200,15 @@ To modify move field declaration from designer file to code-behind file.
 <member name="F:WORK.ViewElectiveMathCourse._tname">
 <summary>
 tname control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:WORK.ViewElectiveMathCourse._AsCont">
+<summary>
+AsCont control.
 </summary>
 <remarks>
 Auto-generated field.
@@ -1801,6 +2314,15 @@ Auto-generated field.
 To modify move field declaration from designer file to code-behind file.
 </remarks>
 </member>
+<member name="F:WORK.ViewInterScienceCourse._AsCont">
+<summary>
+AsCont control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
 <member name="F:WORK.ViewInterScienceCourse._loguname">
 <summary>
 loguname control.
@@ -1840,6 +2362,15 @@ To modify move field declaration from designer file to code-behind file.
 <member name="F:WORK.ViewPhysicsCourse._tname">
 <summary>
 tname control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:WORK.ViewPhysicsCourse._AsCont">
+<summary>
+AsCont control.
 </summary>
 <remarks>
 Auto-generated field.
@@ -1891,6 +2422,15 @@ Auto-generated field.
 To modify move field declaration from designer file to code-behind file.
 </remarks>
 </member>
+<member name="F:WORK.ViewSocialStudiesCourse._AsCont">
+<summary>
+AsCont control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
 <member name="F:WORK.ViewSocialStudiesCourse._loguname">
 <summary>
 loguname control.
@@ -1927,6 +2467,15 @@ Auto-generated field.
 To modify move field declaration from designer file to code-behind file.
 </remarks>
 </member>
+<member name="F:WORK.TutorDashboard._signout">
+<summary>
+signout control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
 <member name="F:WORK.TutorDashboard._engview">
 <summary>
 engview control.
@@ -1945,9 +2494,9 @@ Auto-generated field.
 To modify move field declaration from designer file to code-behind file.
 </remarks>
 </member>
-<member name="F:WORK.TutorDashboard._intsciview">
+<member name="F:WORK.TutorDashboard._annouceview">
 <summary>
-intsciview control.
+annouceview control.
 </summary>
 <remarks>
 Auto-generated field.
@@ -1957,42 +2506,6 @@ To modify move field declaration from designer file to code-behind file.
 <member name="F:WORK.TutorDashboard._socialview">
 <summary>
 socialview control.
-</summary>
-<remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
-</remarks>
-</member>
-<member name="F:WORK.TutorDashboard._physicview">
-<summary>
-physicview control.
-</summary>
-<remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
-</remarks>
-</member>
-<member name="F:WORK.TutorDashboard._emathview">
-<summary>
-emathview control.
-</summary>
-<remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
-</remarks>
-</member>
-<member name="F:WORK.TutorDashboard._chemview">
-<summary>
-chemview control.
-</summary>
-<remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
-</remarks>
-</member>
-<member name="F:WORK.TutorDashboard._bioview">
-<summary>
-bioview control.
 </summary>
 <remarks>
 Auto-generated field.
@@ -2029,6 +2542,15 @@ To modify move field declaration from designer file to code-behind file.
 <member name="F:WORK.TutorDashboard._loguname">
 <summary>
 loguname control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:WORK.TutorDashboard._blogout">
+<summary>
+blogout control.
 </summary>
 <remarks>
 Auto-generated field.
@@ -2153,6 +2675,150 @@ To modify move field declaration from designer file to code-behind file.
 </remarks>
 </member>
 <member name="F:WORK.TutorProfileView._loguname">
+<summary>
+loguname control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:WORK.TutorViewAnnouncement._form1">
+<summary>
+form1 control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:WORK.TutorViewAnnouncement._editbtn">
+<summary>
+editbtn control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:WORK.TutorViewAnnouncement._savebtn">
+<summary>
+savebtn control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:WORK.TutorViewAnnouncement._GridView1">
+<summary>
+GridView1 control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:WORK.TutorViewAnnouncement._SqlDataSource1">
+<summary>
+SqlDataSource1 control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:WORK.TutorViewAnnouncement._loguname">
+<summary>
+loguname control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:WORK.TutorViewEvent._form1">
+<summary>
+form1 control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:WORK.TutorViewEvent._editbtn">
+<summary>
+editbtn control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:WORK.TutorViewEvent._savebtn">
+<summary>
+savebtn control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:WORK.TutorViewEvent._GridView1">
+<summary>
+GridView1 control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:WORK.TutorViewEvent._SqlDataSource1">
+<summary>
+SqlDataSource1 control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:WORK.TutorViewEvent._loguname">
+<summary>
+loguname control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:WORK.ViewSubmissions._searchtxt">
+<summary>
+searchtxt control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:WORK.ViewSubmissions._BtnSearch">
+<summary>
+BtnSearch control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:WORK.ViewSubmissions._GridView1">
+<summary>
+GridView1 control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:WORK.ViewSubmissions._loguname">
 <summary>
 loguname control.
 </summary>
@@ -2569,15 +3235,6 @@ To modify move field declaration from designer file to code-behind file.
 <member name="F:WORK._Try._form1">
 <summary>
 form1 control.
-</summary>
-<remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
-</remarks>
-</member>
-<member name="F:WORK._Try._Menu1">
-<summary>
-Menu1 control.
 </summary>
 <remarks>
 Auto-generated field.

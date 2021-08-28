@@ -116,6 +116,7 @@
     <Content Include="Dashboard\AdminTo\ViewUser\AdminViewTutorView.aspx" />
     <Content Include="Dashboard\StudentDashboard.aspx" />
     <Content Include="Dashboard\StudentTo\StudentProfileView.aspx" />
+    <Content Include="Dashboard\StudentTo\ViewCourse\ViewAssignment.aspx" />
     <Content Include="Dashboard\StudentTo\ViewCourse\ViewBiologyCourse.aspx" />
     <Content Include="Dashboard\StudentTo\ViewCourse\ViewChemistryCourse.aspx" />
     <Content Include="Dashboard\StudentTo\ViewCourse\ViewCoreMathCourse.aspx" />
@@ -126,6 +127,10 @@
     <Content Include="Dashboard\StudentTo\ViewCourse\ViewSocialStudiesCourse.aspx" />
     <Content Include="Dashboard\TutorDashboard.aspx" />
     <Content Include="Dashboard\TutorTo\TutorProfileView.aspx" />
+    <Content Include="Dashboard\TutorTo\TutorViewAnnouncement.aspx" />
+    <Content Include="Dashboard\TutorTo\TutorViewEvent.aspx" />
+    <Content Include="Dashboard\TutorTo\ViewSubmissions.aspx" />
+    <Content Include="About.aspx" />
     <Content Include="lib\Assets\collections\futurelead.jpg" />
     <Content Include="lib\Assets\collections\images %281%29.jpeg" />
     <Content Include="lib\Assets\collections\images %281%29.png" />
@@ -432,7 +437,13 @@
       <DependentUpon>StudentProfileView.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
-    <Compile Include="Dashboard\StudentTo\ViewCourse\CodeFile1.vb" />
+    <Compile Include="Dashboard\StudentTo\ViewCourse\ViewAssignment.aspx.designer.vb">
+      <DependentUpon>ViewAssignment.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Dashboard\StudentTo\ViewCourse\ViewAssignment.aspx.vb">
+      <DependentUpon>ViewAssignment.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
     <Compile Include="Dashboard\StudentTo\ViewCourse\ViewBiologyCourse.aspx.designer.vb">
       <DependentUpon>ViewBiologyCourse.aspx</DependentUpon>
     </Compile>
@@ -501,6 +512,34 @@
     </Compile>
     <Compile Include="Dashboard\TutorTo\TutorProfileView.aspx.vb">
       <DependentUpon>TutorProfileView.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Dashboard\TutorTo\TutorViewAnnouncement.aspx.designer.vb">
+      <DependentUpon>TutorViewAnnouncement.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Dashboard\TutorTo\TutorViewAnnouncement.aspx.vb">
+      <DependentUpon>TutorViewAnnouncement.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Dashboard\TutorTo\TutorViewEvent.aspx.designer.vb">
+      <DependentUpon>TutorViewEvent.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Dashboard\TutorTo\TutorViewEvent.aspx.vb">
+      <DependentUpon>TutorViewEvent.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Dashboard\TutorTo\ViewSubmissions.aspx.designer.vb">
+      <DependentUpon>ViewSubmissions.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Dashboard\TutorTo\ViewSubmissions.aspx.vb">
+      <DependentUpon>ViewSubmissions.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="About.aspx.designer.vb">
+      <DependentUpon>About.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="About.aspx.vb">
+      <DependentUpon>About.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
@@ -728,7 +767,9 @@
       <DependentUpon>Web.config</DependentUpon>
     </None>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Assignment\" />
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>

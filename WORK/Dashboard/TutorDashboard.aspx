@@ -143,7 +143,7 @@
                                     <a class="dropdown-item" href="#grade"><span class="ti-calendar"></span>Grades</a>
                                     <a class="dropdown-item" href="#"><span class="fas fa-comment"></span>Messages</a>
                                     <a class="dropdown-item" href="#"><span class="fas fa-palette"></span>Preferences</a>
-                                    <a class="dropdown-item" href="#"><span class=" ti-save-alt"></span>Log Out</a>
+                                    <a class="dropdown-item" runat="server" id="signout" onserverclick="signout_ServerClick" href="#"><span class=" ti-save-alt"></span>Log Out</a>
                                 </div>
                             </div>
                         </div>
@@ -159,7 +159,7 @@
                                         <h5 class="card-title">
                                             <img src="../lib/Assets/img/table_icons/clipboard_empty.png" />
                                         </h5>
-                                        <p class="card-text">click the button below to add an assignment for your students</p>
+                                        <p class="card-text">Click the button below to add an assignment for your students</p>
                                         <!-- Button trigger modal -->
                                         <a href="#" runat="server" id="engview" class="btn btn-primary" data-toggle="modal" data-target="#staticBackdrop"><span class="ti-arrow-left"></span>View<span class="ti-arrow-right"></span></a>
                                     </div>
@@ -168,13 +168,14 @@
                             <div class="col-lg-3 col-sm-6">
                                 <div class="card text-center">
                                     <div class="card-header">
-                                        <p style="font-size: 20px; margin: 0;">CORE MATHEMATICS</p>
+                                        <p style="font-size: 20px; margin: 0;">VIEW SUBMISSION</p>
                                     </div>
                                     <div class="card-body">
                                         <h5 class="card-title">
-                                            <img src="../lib/Assets/img/table_icons/administrator.png" />
+                                            
+                                            <img src="../lib/Assets/img/table_icons/books.png" />
                                         </h5>
-                                        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                                        <p class="card-text">View the list of students who have submitted their assignment</p>
                                         <a href="#" runat="server" id="cmathview" onserverclick="cmathview_ServerClick" class="btn btn-primary"><span class="ti-arrow-left"></span>View <span class="ti-arrow-right"></span></a>
                                     </div>
                                 </div>
@@ -182,21 +183,22 @@
                             <div class="col-lg-3 col-sm-6">
                                 <div class="card text-center">
                                     <div class="card-header">
-                                        <p style="font-size: 20px; margin: 0;">INTEGRATED SCIENCE</p>
+                                        <p style="font-size: 20px; margin: 0;">ANNOUNCEMENTS</p>
                                     </div>
                                     <div class="card-body">
                                         <h5 class="card-title">
-                                            <img src="../lib/Assets/img/table_icons/administrator.png" />
+                                            <img src="../lib/Assets/img/table_icons/announcement2.png" width="30" height="30" />
                                         </h5>
-                                        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                                        <a href="#" runat="server" id="intsciview" onserverclick="intsciview_ServerClick" class="btn btn-primary"><span class="ti-arrow-left"></span>View <span class="ti-arrow-right"></span></a>
+                                        <p class="card-text">View currently updated announcements</p>
+                                        <!-- Trigger Modal -->
+                                        <a href="#" runat="server" onserverclick="annouceview_ServerClick" id="annouceview" class="btn btn-primary"><span class="ti-arrow-left"></span>View <span class="ti-arrow-right"></span></a>
                                     </div>
                                 </div>
                             </div>
                             <div class="col-lg-3 col-sm-6">
                                 <div class="card text-center">
                                     <div class="card-header">
-                                        <p style="font-size: 20px; margin: 0;">SOCIAL STUDIES</p>
+                                        <p style="font-size: 20px; margin: 0;">UPCOMING EVENTS</p>
                                     </div>
                                     <div class="card-body">
                                         <h5 class="card-title">
@@ -208,64 +210,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="row">
-                            <div class="col-lg-3 col-sm-6">
-                                <div class="card text-center">
-                                    <div class="card-header">
-                                        <p style="font-size: 20px; margin: 0;">PHYSICS</p>
-                                    </div>
-                                    <div class="card-body">
-                                        <h5 class="card-title">
-                                            <img src="../lib/Assets/img/table_icons/administrator.png" />
-                                        </h5>
-                                        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                                        <a href="#" runat="server" id="physicview" onserverclick="physicview_ServerClick" class="btn btn-primary"><span class="ti-arrow-left"></span>View <span class="ti-arrow-right"></span></a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-3 col-sm-6">
-                                <div class="card text-center">
-                                    <div class="card-header">
-                                        <p style="font-size: 20px; margin: 0;">ELECTIVE MATHS</p>
-                                    </div>
-                                    <div class="card-body">
-                                        <h5 class="card-title">
-                                            <img src="../lib/Assets/img/table_icons/administrator.png" />
-                                        </h5>
-                                        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                                        <a href="#" runat="server" id="emathview" onserverclick="emathview_ServerClick" class="btn btn-primary"><span class="ti-arrow-left"></span>View <span class="ti-arrow-right"></span></a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-3 col-sm-6">
-                                <div class="card text-center">
-                                    <div class="card-header">
-                                        <p style="font-size: 20px; margin: 0;">CHEMISTRY</p>
-                                    </div>
-                                    <div class="card-body">
-                                        <h5 class="card-title">
-                                            <img src="../lib/Assets/img/table_icons/administrator.png" />
-                                        </h5>
-                                        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                                        <a href="#" runat="server" id="chemview" onserverclick="chemview_ServerClick" class="btn btn-primary"><span class="ti-arrow-left"></span>View <span class="ti-arrow-right"></span></a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-3 col-sm-6">
-                                <div class="card text-center">
-                                    <div class="card-header">
-                                        <p style="font-size: 20px; margin: 0;">BIOLOGY</p>
-                                    </div>
-                                    <div class="card-body">
-                                        <h5 class="card-title">
-                                            <img src="../lib/Assets/img/table_icons/administrator.png" />
-                                        </h5>
-                                        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                                        <a href="#" runat="server" id="bioview" onserverclick="bioview_ServerClick" class="btn btn-primary"><span class="ti-arrow-left"></span>View <span class="ti-arrow-right"></span></a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                        
                         <div class="row">
                             <div class="col">
                                 <div class="card">
@@ -448,7 +393,7 @@
                             <div class="row">
                                 <div class="col-12">
                                     <hr />
-                                    <p style="font-size: 20px; text-align: center;">You logged In as <a href="StudentTo/StudentProfileView.aspx" id="loguname" runat="server" onserverclick="toprofile_ServerClick"><span id="bottomuname"></span></a><a href="#">(Log Out)</a></p>
+                                    <p style="font-size: 20px; text-align: center;">You logged In as <a href="#" id="loguname" runat="server" onserverclick="toprofile_ServerClick"><span id="bottomuname"></span></a><a id="blogout" runat="server" onserverclick="signout_ServerClick" href="#">(Log Out)</a></p>
                                 </div>
                             </div>
                         </div>
@@ -458,12 +403,13 @@
 
 
             </div>
-            <!-- Modal -->
+            
+            <!-- Assignment Modal -->
             <div class="modal fade" id="staticBackdrop" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
                 <div class="modal-dialog">
                     <div class="modal-content">
                         <div class="modal-header">
-                            <h5 class="modal-title" id="staticBackdropLabel">Modal title</h5>
+                            <h5 class="modal-title" id="staticBackdropLabel">Add Assignment</h5>
                             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                 <span aria-hidden="true">&times;</span>
                             </button>
@@ -487,6 +433,8 @@
                     </div>
                 </div>
             </div>
+
+            
         </div>
     </form>
 
@@ -494,10 +442,9 @@
 
 
 
-    <script src="../lib/SweetAlert.js">   </script>
-    <script src="../lib/jquery/jquery.slim.min.js"></script>
-    <script src="../lib/bootstrap/js/bootstrap.bundle.min.js"></script>
-    <script src="../lib/bootstrap/js/feather-icons/feather.min.js"></script>
+    <script src="../../lib/jquery/jquery.slim.min.js"></script>
+    <script src="../../lib/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="../../lib/bootstrap/js/feather-icons/feather.min.js"></script>
     <script src="AdminAssets/dashboard.js"></script>
     <script>
 

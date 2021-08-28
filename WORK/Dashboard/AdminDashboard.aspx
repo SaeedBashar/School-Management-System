@@ -12,6 +12,7 @@
     <link href="AdminAssets/dashboard.css" rel="stylesheet" />
 
     <title>EasyMan | Administrator Dashboard</title>
+    
     <style>
         .bd-placeholder-img {
             font-size: 1.125rem;
@@ -41,7 +42,7 @@
         }
     </style>
 </head>
-<body>
+<body >
     <form id="form1" runat="server">
         <nav class="navbar navbar-dark sticky-top bg-dark flex-md-nowrap p-0 shadow">
             <a class="navbar-brand  col-md-3 col-lg-2 mr-0 px-3" style="font-size: 20px; display: inline;" href="#">Easy<span style="color: #2c84f1;">Man</span></a>
@@ -52,7 +53,7 @@
             <input class="form-control form-control-dark bg-dark w-100" readonly="readonly" style="cursor: default;" type="search" aria-label="Search" />
             <ul class="navbar-nav px-3">
                 <li class="nav-item text-nowrap">
-                    <a class="nav-link" href="#" style="color: #ddedf1;">Sign out</a>
+                    <a class="nav-link" runat="server" id="signout" onserverclick="signout_ServerClick" href="#" style="color: #ddedf1;">Sign out</a>
                 </li>
             </ul>
         </nav>
@@ -147,7 +148,7 @@
                                 <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                                     <a class="dropdown-item" href="AdminTo/AdminAnnouncementView.aspx">Notice</a>
                                     <a class="dropdown-item" href="AdminTo/AdminEventView.aspx">Events</a>
-                                    <a class="dropdown-item" href="AdminTo/AdminArea.aspx">Admin Area</a>
+                                    <a runat="server" id="adminArea" onserverclick="adminArea_ServerClick" class="dropdown-item" href="#">Admin Area</a>
                                 </div>
                             </div>
                         </div>
@@ -445,13 +446,12 @@
             </div>
         </div>
 
-        <script src="../lib/SweetAlert.js">   </script>
+        
         <script src="../lib/jquery/jquery.slim.min.js"></script>
         <script src="../lib/bootstrap/js/bootstrap.bundle.min.js"></script>
         <script src="../lib/bootstrap/js/feather-icons/feather.min.js"></script>
         <script src="AdminAssets/dashboard.js"></script>
-        <script>
-</script>
+ 
     </form>
 </body>
 </html>

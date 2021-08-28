@@ -14,8 +14,11 @@
 
     <title>EasyMan | Administrative Student View</title>
     <style>
+        body {
+            background-color: #dbd3d3;
+        }
         .dropdown-content {
-            max-height: 400px;
+            max-height: 250px;
             overflow-y: auto;
         }
 
@@ -29,82 +32,52 @@
 </head>
 <body>
     <form id="form1" runat="server">
-    <nav class="navbar navbar-expand-lg navbar-light bg-light ">
+    <nav class="navbar navbar-expand-lg navbar-light bg-primary ">
         <div class="container-fluid">
-            <a class="navbar-brand" href="#">EasyMan</a>
+            <a class="navbar-brand" href="#" style="color:white;">EasyMan</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNavDropdown">
                 <ul class="navbar-nav myMainNav">
                     <li class="nav-item active">
-                        <a class="nav-link" href="../AdminDashboard.aspx">Home <span class="sr-only">(current)</span></a>
+                        <a class="nav-link" style="color:white;" href="../AdminDashboard.aspx">Home <span class="sr-only">(current)</span></a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="AdminArea.aspx"><span class=" ti-settings"> </span>Admin Area</a>
+                        <a class="nav-link" style="color:white;" href="AdminArea.aspx"><span class=" ti-settings"> </span>Admin Area</a>
                     </li>
                    <li class="nav-item">
-                        <a class="nav-link" href="#">Sign Out</a>
+                        <a class="nav-link" href="../../SignIn.aspx" style="color:white;">Sign Out</a>
                     </li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Jump To
+                        <a class="nav-link dropdown-toggle" style="color:white;" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Jump To
                         </a>
                         <div class="dropdown-menu dropdown-content" aria-labelledby="navbarDropdownMenuLink">
                             
-                            <a class="dropdown-item" href="Admin_students_view.aspx">
+                            <a class="dropdown-item" href="AdminStudentView.aspx">
                                 <img src="../../lib/Assets/img/table_icons/group_add.png" height="32" />
                                 Students</a>
-                            <a class="dropdown-item" href="Admin_feescollection_view.aspx">
-                                <img src="../../lib/Assets/img/table_icons/account_balances.png" height="32" />
-                                FeesCollection</a>
-                            <a class="dropdown-item" href="Admin_branch_view.aspx">
-                                <img src="../../lib/Assets/img/table_icons/card_bank.png" height="32" />
-                                Branch</a>
-                            <a class="dropdown-item" href="Admin_teachers_view.aspx">
+                            <a class="dropdown-item" href="AdminTutorView.aspx">
                                 <img src="../../lib/Assets/img/table_icons/blackboard_drawing.png" height="32" />
                                 Teachers</a>
-                            <a class="dropdown-item" href="Admin_subjects_view.aspx">
+                            <a class="dropdown-item" href="AdminCourseView.aspx">
                                 <img src="../../lib/Assets/img/table_icons/books.png" height="32" />
-                                Subjects</a>
-                            <a class="dropdown-item" href="Admin_classes_view.aspx">
+                                Courses</a>
+                            <a class="dropdown-item" href="AdminProgramView.aspx">
                                 <img src="../../lib/Assets/img/table_icons/door_open.png" height="32" />
-                                Classes</a>
-                            <a class="dropdown-item" href="Admin_streams_view.aspx">
-                                <img src="../../lib/Assets/img/table_icons/chart_organisation.png" height="32" />
-                                Streams</a>
-                            <a class="dropdown-item" href="Admin_hostels_view.aspx">
+                                Programs</a>
+                            <a class="dropdown-item" href="AdminHallView.aspx">
                                 <img src="../../lib/Assets/img/table_icons/building.png" height="32" />
-                                Hostels</a>
-                            <a class="dropdown-item" href="Admin_timetable_view.aspx">
-                                <img src="../../lib/Assets/img/table_icons/data_chooser.png" height="32" />
-                                TimeTable</a>
-                            <a class="dropdown-item" href="Admin_events_view.aspx">
+                                Halls</a>
+                            <a class="dropdown-item" href="AdminEventView.aspx">
                                 <img src="../../lib/Assets/img/table_icons/date_add.png" height="32" />
                                 Events</a>
-                            <a class="dropdown-item" href="Admin_notices_view.aspx">
+                            <a class="dropdown-item" href="AdminAnnouncementView.aspx">
                                 <img src="../../lib/Assets/img/table_icons/document_layout.png" height="32" />
                                 Notices/Announcements</a>
-                            <a class="dropdown-item" href="Admin_examresults_view.aspx">
-                                <img src="../../lib/Assets/img/table_icons/application_view_columns.png" height="32" />
-                                Exam Results</a>
-                            <a class="dropdown-item" href="Admin_parents_view.aspx">
+                            <a class="dropdown-item" href="AdminGuardianView.aspx">
                                 <img src="../../lib/Assets/img/table_icons/reseller_programm.png" height="32" />
                                 Parents</a>
-                            <a class="dropdown-item" href="Admin_examcategories_view.aspx">
-                                <img src="../../lib/Assets/img/table_icons/clipboard_empty.png" height="32" />
-                                ExamCategories</a>
-                            <a class="dropdown-item" href="Admin_sessions_view.aspx">
-                                <img src="../../lib/Assets/img/table_icons/check_box.png" height="32" />
-                                Sessions</a>
-                            <a class="dropdown-item" href="Admi_studentcategories_view.aspx">
-                                <img src="../../lib/Assets/img/table_icons/blackboard_steps.png" height="32" />
-                                StudentCategories</a>
-                            <a class="dropdown-item" href="Admin_classattendance_view.aspx">
-                                <img src="../../lib/Assets/img/table_icons/chart_down_color.png" height="32" />
-                                Class Attendance</a>
-                            <a class="dropdown-item" href="Admin_schoolmoney_view.aspx">
-                                <img src="../../lib/Assets/img/table_icons/coins_add.png" height="32" />
-                                Fees Structure</a>
                         </div>
                     </li>
                 </ul>

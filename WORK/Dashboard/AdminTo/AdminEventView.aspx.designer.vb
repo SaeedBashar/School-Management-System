@@ -23,20 +23,65 @@ Partial Public Class AdminEventView
     Protected WithEvents form1 As Global.System.Web.UI.HtmlControls.HtmlForm
     
     '''<summary>
-    '''searchtxt control.
+    '''eventinp control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents searchtxt As Global.System.Web.UI.WebControls.TextBox
+    Protected WithEvents eventinp As Global.System.Web.UI.HtmlControls.HtmlInputGenericControl
     
     '''<summary>
-    '''BtnSearch control.
+    '''delEvent control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents BtnSearch As Global.System.Web.UI.HtmlControls.HtmlButton
+    Protected WithEvents delEvent As Global.System.Web.UI.HtmlControls.HtmlButton
+    
+    '''<summary>
+    '''GridView1 control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents GridView1 As Global.System.Web.UI.WebControls.GridView
+    
+    '''<summary>
+    '''SqlDataSource1 control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents SqlDataSource1 As Global.System.Web.UI.WebControls.SqlDataSource
+    
+    '''<summary>
+    '''queHead control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents queHead As Global.System.Web.UI.HtmlControls.HtmlInputText
+    
+    '''<summary>
+    '''queBody control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents queBody As Global.System.Web.UI.HtmlControls.HtmlTextArea
+    
+    '''<summary>
+    '''submitAnn control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents submitAnn As Global.System.Web.UI.HtmlControls.HtmlButton
 End Class

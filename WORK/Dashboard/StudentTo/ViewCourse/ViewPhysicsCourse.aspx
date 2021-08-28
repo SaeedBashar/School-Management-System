@@ -9,6 +9,8 @@
     <link href="../../../lib/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
     <link href="../../../lib/font-awesome/css/all.min.css" rel="stylesheet" />
     <link href="../../../lib/Themify/themify-icons.css" rel="stylesheet" />
+    <link href="../../../lib/bootstrap-sweetalert/sweetalert.min.css" rel="stylesheet" />
+    <script src="../../../lib/bootstrap-sweetalert/sweetalert.min.js"></script>
 
     <title></title>
 </head>
@@ -40,7 +42,17 @@
                                 <p ><a href="#" style="color: #4dc13b; font-size: 20px;"><i class="ti-announcement" style="margin-right: 4px;"></i>Announcements</a><span style="float: right;color: #4dc13b; ">Your Progress<i class="fas fa-question-circle"></i></span></p>
                                 <br />
                                 <br />
-                                <p>(No Assignment has been posted yet.)</p>
+                                <div class="row">
+                                    <div class="col-4 p-3" >
+                                        <span style="font-size: 20px;font-weight: bolder;border-bottom: 1px solid black; padding-bottom: 4px;">TITLE</span>
+                                    </div>
+                                    <div class="8 p-3">
+                                        <span style="font-size: 20px;font-weight: bolder;border-bottom: 1px solid black;padding-bottom: 4px;">CONTENT</span>
+                                    </div>
+                                </div>
+                                <div runat="server" id="AsCont" class="container ">
+                                    
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -133,7 +145,7 @@
                         </div>        
                     </footer>
 
-    <script src="../../../lib/SweetAlert.js">   </script>
+    
     <script src="../../../lib/jquery/jquery.slim.min.js"></script>
     <script src="../../../lib/bootstrap/js/bootstrap.bundle.min.js"></script>
     <script src="../../../lib/bootstrap/js/feather-icons/feather.min.js"></script>

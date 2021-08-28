@@ -15,7 +15,9 @@
     <form id="form1" runat="server">
         
         <!--ddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd-->
-         
+        <p>This is how it is done</p>
+        
+         <button>Button</button>
         <!--ddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd-->
 
     <script src="lib/font-awesome/js/fontawesome.min.js"></script>
@@ -25,18 +27,15 @@
     <script src="lib/jquery/jquery.slim.min.js"></script>
     <script src="lib/bootstrap/js/bootstrap.bundle.min.js"></script>
     <script type="text/javascript">
-
-</script>
+        $(document).ready(function () {
+            $("button").on("click", function () {
+                $("p").text("how far");
+            });
+        });
+           
+    </script>
          
-        <asp:Menu ID="Menu1" runat="server" Width="500px">
-            <Items>
-                <asp:MenuItem Text="File" Value="File"></asp:MenuItem>
-                <asp:MenuItem Text="Edit" Value="Edit"></asp:MenuItem>
-                <asp:MenuItem Text="View" Value="View"></asp:MenuItem>
-                <asp:MenuItem Text="tormat" Value="tormat"></asp:MenuItem>
-            </Items>
-
-        </asp:Menu>
+        
 
     </form>
     </body>

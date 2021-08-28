@@ -41,6 +41,15 @@ Partial Public Class TutorDashboard
     Protected WithEvents toprofile As Global.System.Web.UI.HtmlControls.HtmlAnchor
     
     '''<summary>
+    '''signout control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents signout As Global.System.Web.UI.HtmlControls.HtmlAnchor
+    
+    '''<summary>
     '''engview control.
     '''</summary>
     '''<remarks>
@@ -59,13 +68,13 @@ Partial Public Class TutorDashboard
     Protected WithEvents cmathview As Global.System.Web.UI.HtmlControls.HtmlAnchor
     
     '''<summary>
-    '''intsciview control.
+    '''annouceview control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents intsciview As Global.System.Web.UI.HtmlControls.HtmlAnchor
+    Protected WithEvents annouceview As Global.System.Web.UI.HtmlControls.HtmlAnchor
     
     '''<summary>
     '''socialview control.
@@ -75,42 +84,6 @@ Partial Public Class TutorDashboard
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents socialview As Global.System.Web.UI.HtmlControls.HtmlAnchor
-    
-    '''<summary>
-    '''physicview control.
-    '''</summary>
-    '''<remarks>
-    '''Auto-generated field.
-    '''To modify move field declaration from designer file to code-behind file.
-    '''</remarks>
-    Protected WithEvents physicview As Global.System.Web.UI.HtmlControls.HtmlAnchor
-    
-    '''<summary>
-    '''emathview control.
-    '''</summary>
-    '''<remarks>
-    '''Auto-generated field.
-    '''To modify move field declaration from designer file to code-behind file.
-    '''</remarks>
-    Protected WithEvents emathview As Global.System.Web.UI.HtmlControls.HtmlAnchor
-    
-    '''<summary>
-    '''chemview control.
-    '''</summary>
-    '''<remarks>
-    '''Auto-generated field.
-    '''To modify move field declaration from designer file to code-behind file.
-    '''</remarks>
-    Protected WithEvents chemview As Global.System.Web.UI.HtmlControls.HtmlAnchor
-    
-    '''<summary>
-    '''bioview control.
-    '''</summary>
-    '''<remarks>
-    '''Auto-generated field.
-    '''To modify move field declaration from designer file to code-behind file.
-    '''</remarks>
-    Protected WithEvents bioview As Global.System.Web.UI.HtmlControls.HtmlAnchor
     
     '''<summary>
     '''grade control.
@@ -147,6 +120,15 @@ Partial Public Class TutorDashboard
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents loguname As Global.System.Web.UI.HtmlControls.HtmlAnchor
+    
+    '''<summary>
+    '''blogout control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents blogout As Global.System.Web.UI.HtmlControls.HtmlAnchor
     
     '''<summary>
     '''queHead control.

@@ -23,6 +23,24 @@ Partial Public Class AdminDashboard
     Protected WithEvents form1 As Global.System.Web.UI.HtmlControls.HtmlForm
     
     '''<summary>
+    '''signout control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents signout As Global.System.Web.UI.HtmlControls.HtmlAnchor
+    
+    '''<summary>
+    '''adminArea control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents adminArea As Global.System.Web.UI.HtmlControls.HtmlAnchor
+    
+    '''<summary>
     '''GridView1 control.
     '''</summary>
     '''<remarks>

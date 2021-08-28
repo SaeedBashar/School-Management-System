@@ -59,66 +59,61 @@
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#">
-                                    <span data-feather="home"></span>
-                                    Site Home
+                                <a class="nav-link" runat="server" onserverclick="engview_ServerClick" href="#">
+                                    <span data-feather="file-text"></span>
+                                    English
             </a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#">
-                                    <span class="ti-calendar"></span>
-                                    Calender
+                                <a class="nav-link" runat="server" onserverclick="cmathview_ServerClick" href="#">
+                                    <span class=" mr-1" data-feather="file-text"></span>
+                                    Core Mathematics
             </a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#">
-                                    <span data-feather="file"></span>
-                                    Private Files
+                                <a class="nav-link" runat="server" onserverclick="intsciview_ServerClick" href="#">
+                                    <span data-feather="file-text"></span>
+                                    Intergrated Science
             </a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#">
-                                    <span data-feather="layers"></span>
-                                    My Courses
+                                <a class="nav-link" runat="server" onserverclick="socialview_ServerClick" href="#">
+                                    <span data-feather="file-text"></span>
+                                    Social Studies
             </a>
                             </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">
-                                    <span data-feather="bar-chart-2"></span>
-                                    Private
-            </a>
-                            </li>
+                            
                         </ul>
 
                         <h6 class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-muted">
-                            <span>Saved reports</span>
+                            <span>Electives Courses</span>
                             <a class="d-flex align-items-center text-muted" href="#grade" aria-label="Add a new report">
                                 <span data-feather="plus-circle"></span>
                             </a>
                         </h6>
                         <ul class="nav flex-column mb-2">
                             <li class="nav-item">
-                                <a class="nav-link" href="#">
+                                <a class="nav-link" runat="server" onserverclick="emathview_ServerClick" href="#">
                                     <span data-feather="file-text"></span>
-                                    Current month
+                                    Elective Mathematics
             </a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#">
+                                <a class="nav-link" runat="server" onserverclick="physicview_ServerClick" href="#">
                                     <span data-feather="file-text"></span>
-                                    Last quarter
+                                    Physics
             </a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#">
+                                <a class="nav-link" runat="server" onserverclick="chemview_ServerClick" href="#">
                                     <span data-feather="file-text"></span>
-                                    Social engagement
+                                    Chemistry
             </a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#">
+                                <a class="nav-link" runat="server" onserverclick="bioview_ServerClick" href="#">
                                     <span data-feather="file-text"></span>
-                                    Year-end sale
+                                    Biology
             </a>
                             </li>
                         </ul>
@@ -141,7 +136,7 @@
                                     <a class="dropdown-item" href="#grade"><span class="ti-calendar"></span>Grades</a>
                                     <a class="dropdown-item" href="#"><span class="fas fa-comment"></span>Messages</a>
                                     <a class="dropdown-item" href="#"><span class="fas fa-palette"></span>Preferences</a>
-                                    <a class="dropdown-item" href="#"><span class=" ti-save-alt"></span>Log Out</a>
+                                    <a class="dropdown-item" runat="server" id="signout" onserverclick="signout_ServerClick" href="#"><span class=" ti-save-alt"></span>Log Out</a>
                                 </div>
                             </div>
                         </div>
@@ -157,7 +152,7 @@
                                         <h5 class="card-title">
                                             <img src="../lib/Assets/img/table_icons/administrator.png" />
                                         </h5>
-                                        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                                        <p class="card-text">View English assignments and other related information.</p>
                                         <a href="#" runat="server" id="engview" onserverclick="engview_ServerClick" class="btn btn-primary"><span class="ti-arrow-left"></span>View <span class="ti-arrow-right"></span></a>
                                     </div>
                                 </div>
@@ -171,7 +166,7 @@
                                         <h5 class="card-title">
                                             <img src="../lib/Assets/img/table_icons/administrator.png" />
                                         </h5>
-                                        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                                        <p class="card-text">View Core Mathematics assignments and other related information.</p>
                                         <a href="#" runat="server" id="cmathview" onserverclick="cmathview_ServerClick" class="btn btn-primary"><span class="ti-arrow-left"></span>View <span class="ti-arrow-right"></span></a>
                                     </div>
                                 </div>
@@ -179,13 +174,13 @@
                             <div class="col-lg-3 col-sm-6">
                                 <div class="card text-center">
                                     <div class="card-header">
-                                        <p style="font-size: 20px; margin: 0;">INTEGRATIED SCIENCE</p>
+                                        <p style="font-size: 20px; margin: 0;">INTEGRATED SCIENCE</p>
                                     </div>
                                     <div class="card-body">
                                         <h5 class="card-title">
                                             <img src="../lib/Assets/img/table_icons/administrator.png" />
                                         </h5>
-                                        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                                        <p class="card-text">View Integrated Science assignments and other related information.</p>
                                         <a href="#" runat="server" id="intsciview" onserverclick="intsciview_ServerClick" class="btn btn-primary"><span class="ti-arrow-left"></span>View <span class="ti-arrow-right"></span></a>
                                     </div>
                                 </div>
@@ -199,7 +194,7 @@
                                         <h5 class="card-title">
                                             <img src="../lib/Assets/img/table_icons/administrator.png" />
                                         </h5>
-                                        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                                        <p class="card-text">View Social Studies assignments and other related information.</p>
                                         <a href="#" runat="server" id="socialview" onserverclick="socialview_ServerClick" class="btn btn-primary"><span class="ti-arrow-left"></span>View <span class="ti-arrow-right"></span></a>
                                     </div>
                                 </div>
@@ -215,7 +210,7 @@
                                         <h5 class="card-title">
                                             <img src="../lib/Assets/img/table_icons/administrator.png" />
                                         </h5>
-                                        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                                        <p class="card-text">View Physics assignments and other related information.</p>
                                         <a href="#" runat="server" id="physicview" onserverclick="physicview_ServerClick" class="btn btn-primary"><span class="ti-arrow-left"></span>View <span class="ti-arrow-right"></span></a>
                                     </div>
                                 </div>
@@ -229,7 +224,7 @@
                                         <h5 class="card-title">
                                             <img src="../lib/Assets/img/table_icons/administrator.png" />
                                         </h5>
-                                        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                                        <p class="card-text">View Elective Maths assignments and other related information.</p>
                                         <a href="#" runat="server" id="emathview" onserverclick="emathview_ServerClick" class="btn btn-primary"><span class="ti-arrow-left"></span>View <span class="ti-arrow-right"></span></a>
                                     </div>
                                 </div>
@@ -243,7 +238,7 @@
                                         <h5 class="card-title">
                                             <img src="../lib/Assets/img/table_icons/administrator.png" />
                                         </h5>
-                                        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                                        <p class="card-text">View Chemistry assignments and other related information.</p>
                                         <a href="#" runat="server" id="chemview" onserverclick="chemview_ServerClick" class="btn btn-primary"><span class="ti-arrow-left"></span>View <span class="ti-arrow-right"></span></a>
                                     </div>
                                 </div>
@@ -257,7 +252,7 @@
                                         <h5 class="card-title">
                                             <img src="../lib/Assets/img/table_icons/administrator.png" />
                                         </h5>
-                                        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                                        <p class="card-text">View Biology assignments and other related information.</p>
                                         <a href="#" runat="server" id="bioview" onserverclick="bioview_ServerClick" class="btn btn-primary"><span class="ti-arrow-left"></span>View <span class="ti-arrow-right"></span></a>
                                     </div>
                                 </div>
@@ -444,7 +439,7 @@
                             <div class="row">
                                <div class="col-12">
                                    <hr /> 
-                                   <p style="font-size: 20px;text-align:center;">You logged In as <a href="StudentTo/StudentProfileView.aspx" id="loguname" runat="server" onserverclick="toprofile_ServerClick"><span id="bottomuname"> </span></a><a href="#">(Log Out)</a></p>
+                                   <p style="font-size: 20px;text-align:center;">You logged In as <a href="StudentTo/StudentProfileView.aspx" id="loguname" runat="server" onserverclick="toprofile_ServerClick"><span id="bottomuname"> </span></a><a runat="server" id="blogout" onserverclick="signout_ServerClick" href="#">(Log Out)</a></p>
                                </div>
                             </div>
                         </div>        

@@ -9,99 +9,90 @@
     <link href="../../lib/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
     <link href="../../lib/font-awesome/css/all.css" rel="stylesheet" />
     <link href="../../lib/Themify/themify-icons.css" rel="stylesheet" />
+     <link href="../../lib/bootstrap-sweetalert/sweetalert.min.css" rel="stylesheet" />
+    <script src="../../lib/bootstrap-sweetalert/sweetalert.min.js"></script>
 
     <title>EasyMan | Administrative Student View</title>
     <style>
+        body {
+            background-color: #dbd3d3;
+        }
         .dropdown-content {
-            max-height: 400px;
+            max-height: 200px;
             overflow-y: auto;
         }
 
         .myMainNav li:hover {
             background-color:aquamarine;
         }
+        
         .mySubNav li:hover {
             background-color:aquamarine;
         }
+        .auto-style1 {
+            position: relative;
+            width: 100%;
+            -ms-flex-preferred-size: 0;
+            flex-basis: 0;
+            -ms-flex-positive: 1;
+            flex-grow: 1;
+            max-width: 100%;
+            left: -29px;
+            top: 1px;
+            padding-left: 15px;
+            padding-right: 15px;
+        }
+        
     </style>
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light ">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="#">EasyMan</a>
+    <form id="form1" runat="server">
+    <nav class="navbar navbar-expand-lg navbar-light bg-primary" >
+        <div class="container-fluid" >
+            <a class="navbar-brand" href="#" style="color:white;">EasyMan</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNavDropdown">
                 <ul class="navbar-nav myMainNav">
                     <li class="nav-item active">
-                        <a class="nav-link" href="../AdminDashboard.aspx">Home <span class="sr-only">(current)</span></a>
+                        <a class="nav-link" href="../AdminDashboard.aspx" style="color:white;">Home <span class="sr-only">(current)</span></a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="AdminArea.aspx"><span class=" ti-settings"> </span>Admin Area</a>
+                        <a class="nav-link" href="AdminArea.aspx" style="color:white;"><span class=" ti-settings"> </span>Admin Area</a>
                     </li>
                    <li class="nav-item">
-                        <a class="nav-link" href="#">Sign Out</a>
+                        <a class="nav-link" href="../../SignIn.aspx" style="color:white;">Sign Out</a>
                     </li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Jump To
+                        <a class="nav-link dropdown-toggle"  style="color:white;" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Jump To
                         </a>
                         <div class="dropdown-menu dropdown-content" aria-labelledby="navbarDropdownMenuLink">
                             
-                            <a class="dropdown-item" href="Admin_students_view.aspx">
+                            <a class="dropdown-item" href="AdminStudentView.aspx">
                                 <img src="../../lib/Assets/img/table_icons/group_add.png" height="32" />
                                 Students</a>
-                            <a class="dropdown-item" href="Admin_feescollection_view.aspx">
-                                <img src="../../lib/Assets/img/table_icons/account_balances.png" height="32" />
-                                FeesCollection</a>
-                            <a class="dropdown-item" href="Admin_branch_view.aspx">
-                                <img src="../../lib/Assets/img/table_icons/card_bank.png" height="32" />
-                                Branch</a>
-                            <a class="dropdown-item" href="Admin_teachers_view.aspx">
+                            <a class="dropdown-item" href="AdminTutorView.aspx">
                                 <img src="../../lib/Assets/img/table_icons/blackboard_drawing.png" height="32" />
                                 Teachers</a>
-                            <a class="dropdown-item" href="Admin_subjects_view.aspx">
+                            <a class="dropdown-item" href="AdminCourseView.aspx">
                                 <img src="../../lib/Assets/img/table_icons/books.png" height="32" />
-                                Subjects</a>
-                            <a class="dropdown-item" href="Admin_classes_view.aspx">
+                                Courses</a>
+                            <a class="dropdown-item" href="AdminProgramView.aspx">
                                 <img src="../../lib/Assets/img/table_icons/door_open.png" height="32" />
-                                Classes</a>
-                            <a class="dropdown-item" href="Admin_streams_view.aspx">
-                                <img src="../../lib/Assets/img/table_icons/chart_organisation.png" height="32" />
-                                Streams</a>
-                            <a class="dropdown-item" href="Admin_hostels_view.aspx">
+                                Programs</a>
+                            <a class="dropdown-item" href="AdminHallView.aspx">
                                 <img src="../../lib/Assets/img/table_icons/building.png" height="32" />
-                                Hostels</a>
-                            <a class="dropdown-item" href="Admin_timetable_view.aspx">
-                                <img src="../../lib/Assets/img/table_icons/data_chooser.png" height="32" />
-                                TimeTable</a>
-                            <a class="dropdown-item" href="Admin_events_view.aspx">
+                                Halls</a>
+                            <a class="dropdown-item" href="AdminEventView.aspx">
                                 <img src="../../lib/Assets/img/table_icons/date_add.png" height="32" />
                                 Events</a>
-                            <a class="dropdown-item" href="Admin_notices_view.aspx">
+                            <a class="dropdown-item" href="AdminAnnouncementView.aspx">
                                 <img src="../../lib/Assets/img/table_icons/document_layout.png" height="32" />
                                 Notices/Announcements</a>
-                            <a class="dropdown-item" href="Admin_examresults_view.aspx">
-                                <img src="../../lib/Assets/img/table_icons/application_view_columns.png" height="32" />
-                                Exam Results</a>
-                            <a class="dropdown-item" href="Admin_parents_view.aspx">
+                            <a class="dropdown-item" href="AdminGuardianView.aspx">
                                 <img src="../../lib/Assets/img/table_icons/reseller_programm.png" height="32" />
                                 Parents</a>
-                            <a class="dropdown-item" href="Admin_examcategories_view.aspx">
-                                <img src="../../lib/Assets/img/table_icons/clipboard_empty.png" height="32" />
-                                ExamCategories</a>
-                            <a class="dropdown-item" href="Admin_sessions_view.aspx">
-                                <img src="../../lib/Assets/img/table_icons/check_box.png" height="32" />
-                                Sessions</a>
-                            <a class="dropdown-item" href="Admi_studentcategories_view.aspx">
-                                <img src="../../lib/Assets/img/table_icons/blackboard_steps.png" height="32" />
-                                StudentCategories</a>
-                            <a class="dropdown-item" href="Admin_classattendance_view.aspx">
-                                <img src="../../lib/Assets/img/table_icons/chart_down_color.png" height="32" />
-                                Class Attendance</a>
-                            <a class="dropdown-item" href="Admin_schoolmoney_view.aspx">
-                                <img src="../../lib/Assets/img/table_icons/coins_add.png" height="32" />
-                                Fees Structure</a>
                         </div>
                     </li>
                 </ul>
@@ -123,12 +114,14 @@
     </div>
     <div class="container mt-5">
         <div class="row">
-            <div class="col">
+            <div class="auto-style1">
                 <div class="card text-center">
                     <div class="card-header">
                         <nav class="navbar navbar-expand-lg navbar-light bg-light">
-                            <a class="navbar-brand" href="../../SignUp/StudentSignUp.aspx" style="background-color:#2ec42d;padding: 1px 5px;border-radius:4px;">
-                                <img src="../../lib/Assets/img/table_icons/group_add.png" />
+
+                            <!-- Button trigger modal -->
+                            <a class="navbar-brand" href="#" data-toggle="modal" data-target="#staticBackdrop" style="background-color:#2ec42d;padding: 1px 5px;border-radius:4px;">
+                                <span class="fas fa-plus-circle"></span>
                                 Add New
                             </a>
                             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -139,44 +132,60 @@
                                     <li class="nav-item active">
                                         <a class="nav-link" onclick="MyPrint()" href="#">Print Preview <span class="sr-only">(current)</span></a>
                                     </li>
-                                    <li class="nav-item" style="padding-left:5px;padding-right:5px;">
-                                        <form runat="server" style="padding-top: 7.5px;">
-                                           <asp:DropDownList ID="DropDownList1" runat="server">
-                                              <asp:ListItem>5</asp:ListItem>
-                                              <asp:ListItem>10</asp:ListItem>
-                                              <asp:ListItem>15</asp:ListItem>
-                                           </asp:DropDownList>
-                                        </form>
-                                    </li>
-                                    <li class="nav-item dropdown">
-                                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown
-                                        </a>
-                                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                            <a class="dropdown-item" href="#">Action</a>
-                                            <a class="dropdown-item" href="#">Another action</a>
-                                            <div class="dropdown-divider"></div>
-                                            <a class="dropdown-item" href="#">Something else here</a>
-                                        </div>
-                                    </li>
+                                    
                                 </ul>
-                                <form class="form-inline my-2 my-lg-0">
-                                    <input class="form-control mr-sm-2" type="search" placeholder="Delete a record" aria-label="Search"/>
-                                    <button class="btn btn-outline-success my-2 my-sm-0" type="button">Delete</button>
-                                </form>
+                                <div class="form-inline my-2 my-lg-0">
+                                    <input runat="server" id="anninp" class="form-control mr-sm-2" type="search" placeholder="Delete a record" aria-label="Search"/>
+                                    <button runat="server" id="delann" onserverclick="delann_ServerClick" class="btn btn-outline-success my-2 my-sm-0" type="button">Delete</button>
+                               </div>
                             </div>
                         </nav>
                     </div>
                     <div class="card-body" style="height:400px">
-                        <h5 class="card-title">Special title treatment</h5>
-                        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                        <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataSourceID="SqlDataSource1" Width="100%">
+                            <Columns>
+                                <asp:BoundField DataField="title" HeaderText="Title" SortExpression="title" />
+                                <asp:BoundField DataField="content" HeaderText="Content" SortExpression="content" />
+                            </Columns>
+                            <HeaderStyle BackColor="#0066FF" />
+                        </asp:GridView>
+                        <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="Data Source=DESKTOP-VPRF4HJ\SQLEXPRESS;Initial Catalog=SchoolManagement;Integrated Security=True" ProviderName="System.Data.SqlClient" SelectCommand="SELECT * FROM [Announcement]"></asp:SqlDataSource>
                     </div>
                     <div class="card-footer text-muted">
-                        2 days ago
+                        
                     </div>
                 </div>
             </div>
         </div>
+           <!-- Modal -->
+            <div class="modal fade" id="staticBackdrop" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="staticBackdropLabel">Add Announcement</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <div>
+                                <div class="form-group">
+                                    <label for="recipient-name" class="col-form-label">Title:</label>
+                                    <input type="text" runat="server" id="queHead" class="form-control"/>
+                                </div>
+                                <div class="form-group">
+                                    <label for="message-text" class="col-form-label">Question:</label>
+                                    <textarea runat="server" id="queBody" class="form-control" rows="10"></textarea>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary"  data-dismiss="modal">Cancel</button>
+                            <button runat="server" id="submitAnn" onserverclick="submitAnn_ServerClick" type="button" class="btn btn-primary" data-dismiss="modal">Submit</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
     </div>
 
     <script src="../../lib/bootstrap/js/jquery/jquery.slim.min.js"></script>
@@ -187,5 +196,6 @@
             window.print();
         }
     </script>
+    </form>
 </body>
 </html>

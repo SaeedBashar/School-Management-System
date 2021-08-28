@@ -6,23 +6,44 @@ Public Class StudentDashboard
     Inherits System.Web.UI.Page
 
     Dim Con As New SqlConnection("Data Source=DESKTOP-VPRF4HJ\SQLEXPRESS;Initial Catalog=SchoolManagement;Integrated Security=True")
+
     Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
-        Greet()
-        Dim key As String = Request.QueryString("student_id")
-        Dim cmd As New SqlCommand
-        Dim query As String = "select sub_id as SubjetId, class_work as ClassWork, mid_term as MidTerm, end_term as EndTerm, class_work + mid_term + end_term as Total from English where std_id = '" & key & "'
+        If Not IsPostBack() Then
+
+            Greet()
+            Dim key As String = Request.QueryString("student_id")
+            Session("stdid") = key
+            Dim cmd As New SqlCommand
+            Dim query As String = "select sub_id as SubjetId, class_work as ClassWork, mid_term as MidTerm, end_term as EndTerm, class_work + mid_term + end_term as Total from English where std_id = '" & key & "'
                                 UNION
                                select sub_id as SubjetId, class_work as ClassWork, mid_term as MidTerm, end_term as EndTerm, class_work + mid_term + end_term as Total from  Core_Mathematics where std_id = '" & key & "'
                                 UNION
                                select sub_id as SubjetId, class_work as ClassWork, mid_term as MidTerm, end_term as EndTerm, class_work + mid_term + end_term as Total from Inter_science where std_id = '" & key & "'
                                 UNION
                                select sub_id as SubjetId, class_work as ClassWork, mid_term as MidTerm, end_term as EndTerm, class_work + mid_term + end_term as Total from Social_studies where std_id = '" & key & "' "
-        cmd.CommandText = query
-        cmd.Connection = Con
-        Con.Open()
-        GridView1.DataSource = cmd.ExecuteReader()
-        GridView1.DataBind()
-        Con.Close()
+            cmd.CommandText = query
+            cmd.Connection = Con
+            Con.Open()
+            GridView1.DataSource = cmd.ExecuteReader()
+            GridView1.DataBind()
+            Con.Close()
+
+
+            '    Dim sdr As SqlDataReader
+
+            'query = "select * from studentPasswordTable where std_id= '" & Request.QueryString("student_id") & "'"
+
+            'cmd.CommandText = query
+            '    cmd.Connection = Con
+
+            '    Con.Open()
+            '    sdr = cmd.ExecuteReader
+            'sdr.Read()
+            'If sdr("loginStatus") = 0 Then
+            '    Response.Redirect("../SignIn.aspx")
+            'End If
+            'Con.Close()
+        End If
     End Sub
 
     'Appending user name to welcome to welcome p element
@@ -95,5 +116,18 @@ Public Class StudentDashboard
 
     Protected Sub bioview_ServerClick(sender As Object, e As EventArgs)
         viewBiologyCourse()
+    End Sub
+
+    Protected Sub signout_ServerClick(sender As Object, e As EventArgs)
+        Dim cmd As New SqlCommand
+        Dim query As String = "update StudentPasswordTable set loginStatus = 0 where std_id= '" & Request.QueryString("student_id") & "'"
+        cmd.CommandText = query
+        cmd.Connection = Con
+
+        Con.Open()
+        cmd.ExecuteNonQuery()
+        Con.Close()
+
+        Response.Redirect("../SignIn.aspx")
     End Sub
 End Class

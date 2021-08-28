@@ -6,11 +6,9 @@ Public Class TutorDashboard
     Inherits System.Web.UI.Page
 
     Dim Con As New SqlConnection("Data Source=DESKTOP-VPRF4HJ\SQLEXPRESS;Initial Catalog=SchoolManagement;Integrated Security=True")
+    Dim cid As String
     Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
         If Not IsPostBack() Then
-
-
-
             Greet()
             Dim key As String = Request.QueryString("tutor_id")
             Dim cmd As New SqlCommand
@@ -28,6 +26,7 @@ Public Class TutorDashboard
             If dt.HasRows Then
                 grade.InnerHtml += dt("sub_name").ToString.ToUpper
                 If dt.GetSqlValue(0).ToString = "200" Then
+                    cid = "200"
                     dt.Close()
                     query = "select std_id as 'Student Id', class_work as 'Class Work', mid_term as 'Mid Term', end_term as 'End Term' from english "
                     cmd.CommandText = query
@@ -35,6 +34,7 @@ Public Class TutorDashboard
                     GridView1.DataSource = dt
                     GridView1.DataBind()
                 ElseIf dt.GetSqlValue(0).ToString = "201" Then
+                    cid = "201"
                     dt.Close()
                     query = "select std_id as 'Student Id', class_work as 'Class Work', mid_term as 'Mid Term', end_term as 'End Term' from Core_mathematics"
                     cmd.CommandText = query
@@ -42,6 +42,7 @@ Public Class TutorDashboard
                     GridView1.DataSource = dt
                     GridView1.DataBind()
                 ElseIf dt.GetSqlValue(0).ToString = "202" Then
+                    cid = "202"
                     dt.Close()
                     query = "select std_id as 'Student Id', class_work as 'Class Work', mid_term as 'Mid Term', end_term as 'End Term' from inter_science "
                     cmd.CommandText = query
@@ -49,6 +50,7 @@ Public Class TutorDashboard
                     GridView1.DataSource = dt
                     GridView1.DataBind()
                 Else
+                    cid = "203"
                     dt.Close()
                     query = "select std_id as 'Student Id', class_work as 'Class Work', mid_term as 'Mid Term', end_term as 'End Term' from social_studies "
                     cmd.CommandText = query
@@ -59,6 +61,21 @@ Public Class TutorDashboard
 
             End If
 
+            Con.Close()
+
+            Dim sdr As SqlDataReader
+
+            query = "select * from tutorPasswordTable where tut_id= '" & key & "'"
+
+            cmd.CommandText = query
+            cmd.Connection = Con
+
+            Con.Open()
+            sdr = cmd.ExecuteReader
+            sdr.Read()
+            If sdr("loginStatus") = 0 Then
+                Response.Redirect("../SignIn.aspx")
+            End If
             Con.Close()
         End If
     End Sub
@@ -83,33 +100,19 @@ Public Class TutorDashboard
 
     End Sub
 
+    'Sends user to submissions page
     Protected Sub cmathview_ServerClick(sender As Object, e As EventArgs)
-
+        Response.Redirect("TutorTo/ViewSubmissions.aspx?cid=" + cid)
     End Sub
 
-    Protected Sub intsciview_ServerClick(sender As Object, e As EventArgs)
 
-    End Sub
+
 
     Protected Sub socialview_ServerClick(sender As Object, e As EventArgs)
 
     End Sub
 
-    Protected Sub physicview_ServerClick(sender As Object, e As EventArgs)
 
-    End Sub
-
-    Protected Sub emathview_ServerClick(sender As Object, e As EventArgs)
-
-    End Sub
-
-    Protected Sub chemview_ServerClick(sender As Object, e As EventArgs)
-
-    End Sub
-
-    Protected Sub bioview_ServerClick(sender As Object, e As EventArgs)
-
-    End Sub
 
     Protected Sub submitQue_ServerClick(sender As Object, e As EventArgs)
         Try
@@ -140,7 +143,28 @@ Public Class TutorDashboard
             Con.Close()
         Catch ex As Exception
             MsgBox(ex.Source + vbCrLf + ex.Message)
-            ClientScript.RegisterClientScriptBlock(Me.GetType(), "error", "<script type='text/javascript'>swal('An error check and try again!!');</script>")
+            ClientScript.RegisterClientScriptBlock(Me.GetType(), "error", "<script type='text/javascript'>swal('An error occured check and try again!!');</script>")
         End Try
+    End Sub
+
+    Protected Sub viewAssign_ServerClick(sender As Object, e As EventArgs)
+
+    End Sub
+
+    Protected Sub annouceview_ServerClick(sender As Object, e As EventArgs)
+
+    End Sub
+
+    Protected Sub signout_ServerClick(sender As Object, e As EventArgs)
+        Dim cmd As New SqlCommand
+        Dim query As String = "update tutorPasswordTable set loginStatus = 0 where tut_id= '" & Request.QueryString("tutor_id") & "'"
+        cmd.CommandText = query
+        cmd.Connection = Con
+
+        Con.Open()
+        cmd.ExecuteNonQuery()
+        Con.Close()
+
+        Response.Redirect("../SignIn.aspx")
     End Sub
 End Class
