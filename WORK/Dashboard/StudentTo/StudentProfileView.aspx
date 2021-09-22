@@ -24,6 +24,11 @@
     </style>
 </head>
 <body style="background-color: #c6c4c4;">
+    <nav class="navbar navbar-expand-lg navbar-light bg-primary ">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#" style="color: white;">EasyMan</a>
+        </div>
+    </nav>
     <form id="form1" runat="server">
         <div class="container p-5">
             <div class="row">
@@ -66,24 +71,7 @@
                     </div>
                 </div>
             </div>
-            <div class="row pt-2">
-                <div class="col">
-                    <div class="card">
-                        <div class="card-body">
-                            <div class="col">
-                                <label><a href="#">English</a></label><br />
-                                <label><a href="#">Intergrated Science</a></label><br />
-                                <label><a href="#">Core Mathematics</a></label><br />
-                                <label><a href="#">Social Studies</a></label><br />
-                                <label><a href="#">Elective Mathematics</a></label><br />
-                                <label><a href="#">Chemistry</a></label><br />
-                                <label><a href="#">Physics</a></label><br />
-                                <label><a href="#">Biology</a></label><br />
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            
         </div>
     </form>
                     <footer style="background-color: #b0abab;" class="p-4">

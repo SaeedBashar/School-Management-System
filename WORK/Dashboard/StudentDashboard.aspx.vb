@@ -20,7 +20,16 @@ Public Class StudentDashboard
                                 UNION
                                select sub_id as SubjetId, class_work as ClassWork, mid_term as MidTerm, end_term as EndTerm, class_work + mid_term + end_term as Total from Inter_science where std_id = '" & key & "'
                                 UNION
-                               select sub_id as SubjetId, class_work as ClassWork, mid_term as MidTerm, end_term as EndTerm, class_work + mid_term + end_term as Total from Social_studies where std_id = '" & key & "' "
+                               select sub_id as SubjetId, class_work as ClassWork, mid_term as MidTerm, end_term as EndTerm, class_work + mid_term + end_term as Total from Social_studies where std_id = '" & key & "' 
+                                UNION
+                               select sub_id as SubjetId, class_work as ClassWork, mid_term as MidTerm, end_term as EndTerm, class_work + mid_term + end_term as Total from Elect_math where std_id = '" & key & "' 
+                                UNION
+                               select sub_id as SubjetId, class_work as ClassWork, mid_term as MidTerm, end_term as EndTerm, class_work + mid_term + end_term as Total from physics where std_id = '" & key & "' 
+                                UNION
+                               select sub_id as SubjetId, class_work as ClassWork, mid_term as MidTerm, end_term as EndTerm, class_work + mid_term + end_term as Total from Chemistry where std_id = '" & key & "' 
+                                UNION
+                               select sub_id as SubjetId, class_work as ClassWork, mid_term as MidTerm, end_term as EndTerm, class_work + mid_term + end_term as Total from Biology where std_id = '" & key & "' 
+"
             cmd.CommandText = query
             cmd.Connection = Con
             Con.Open()
@@ -71,19 +80,19 @@ Public Class StudentDashboard
         Response.Redirect("StudentTo/ViewCourse/ViewInterScienceCourse.aspx?cid=202&std_name=" + Request.QueryString("std_name"))
     End Sub
     Private Sub viewSocialStudiesCourse()
-        Response.Redirect("StudentTo/ViewCourse/ViewSocialStudiesCourse.aspx?cid=204&std_name=" + Request.QueryString("std_name"))
+        Response.Redirect("StudentTo/ViewCourse/ViewSocialStudiesCourse.aspx?cid=203&std_name=" + Request.QueryString("std_name"))
     End Sub
     Private Sub viewElectiveMathCourse()
-        Response.Redirect("StudentTo/ViewCourse/ViewElectiveMathCourse.aspx?cid=&std_name=" + Request.QueryString("std_name"))
+        Response.Redirect("StudentTo/ViewCourse/ViewElectiveMathCourse.aspx?cid=204&std_name=" + Request.QueryString("std_name"))
     End Sub
     Private Sub viewPhysicsCourse()
-        Response.Redirect("StudentTo/ViewCourse/ViewPhysicsCourse.aspx?cid=&std_name=" + Request.QueryString("std_name"))
+        Response.Redirect("StudentTo/ViewCourse/ViewPhysicsCourse.aspx?cid=205&std_name=" + Request.QueryString("std_name"))
     End Sub
     Private Sub viewChemistryCourse()
-        Response.Redirect("StudentTo/ViewCourse/ViewChemistryCourse.aspx?cid=&std_name=" + Request.QueryString("std_name"))
+        Response.Redirect("StudentTo/ViewCourse/ViewChemistryCourse.aspx?cid=206&std_name=" + Request.QueryString("std_name"))
     End Sub
     Private Sub viewBiologyCourse()
-        Response.Redirect("StudentTo/ViewCourse/ViewBiologyCourse.aspx?cid=&std_name=" + Request.QueryString("std_name"))
+        Response.Redirect("StudentTo/ViewCourse/ViewBiologyCourse.aspx?cid=207&std_name=" + Request.QueryString("std_name"))
     End Sub
 
     Protected Sub engview_ServerClick(sender As Object, e As EventArgs)

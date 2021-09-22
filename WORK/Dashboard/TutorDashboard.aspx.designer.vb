@@ -77,13 +77,13 @@ Partial Public Class TutorDashboard
     Protected WithEvents annouceview As Global.System.Web.UI.HtmlControls.HtmlAnchor
     
     '''<summary>
-    '''socialview control.
+    '''eventeview control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents socialview As Global.System.Web.UI.HtmlControls.HtmlAnchor
+    Protected WithEvents eventeview As Global.System.Web.UI.HtmlControls.HtmlAnchor
     
     '''<summary>
     '''grade control.

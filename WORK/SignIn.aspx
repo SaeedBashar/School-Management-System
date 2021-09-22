@@ -24,13 +24,13 @@
     <div class="container">
         <div class="row">
             <div class="col-sm-12 col-md-8 col-lg-6 offset-md-2 offset-lg-3">
-                <p style="font-size: 20px; color:#2388f6; font-weight: 600;">Easy<span style="color: white; background-color: #2388f6;">Man</span></p>
+                <p style="font-size: 20px; color:#2388f6; font-weight: 600;">Easy<span class="bg-primary" style="color: white;">Man</span></p>
             </div>
         </div>
         <div class="row pb-3">
             <div class="col-sm-10 col-md-8 col-lg-6 offset-sm-2 offset-md-2 offset-lg-4">
                 <p style="font-weight: bold; font-size: larger;">Sign in</p>
-                <p class="text-info">Join the world of virtual education</p>
+                <p class="text-primary">Join the world of virtual education</p>
             </div>
         </div>
         <div class="row">
@@ -84,11 +84,11 @@
                             </span>
                         </div>
                     </div>
-            </div>
-            </form>
+                </form>
+            </div>   
         </div>
     </div>
-    </div>
+    
 
     
     <script src="lib/jquery/jquery.slim.min.js"></script>b

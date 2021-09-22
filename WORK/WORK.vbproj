@@ -131,6 +131,33 @@
     <Content Include="Dashboard\TutorTo\TutorViewEvent.aspx" />
     <Content Include="Dashboard\TutorTo\ViewSubmissions.aspx" />
     <Content Include="About.aspx" />
+    <Content Include="Home\assets\css\style.css" />
+    <Content Include="Home\assets\img\cta-bg.jpg" />
+    <Content Include="Home\assets\img\hero-img.png" />
+    <Content Include="Home\assets\img\why-us.png" />
+    <Content Include="Home\assets\js\main.js" />
+    <Content Include="Home\assets\vendor\bootstrap\css\bootstrap-grid.css" />
+    <Content Include="Home\assets\vendor\bootstrap\css\bootstrap-grid.min.css" />
+    <Content Include="Home\assets\vendor\bootstrap\css\bootstrap-reboot.css" />
+    <Content Include="Home\assets\vendor\bootstrap\css\bootstrap-reboot.min.css" />
+    <Content Include="Home\assets\vendor\bootstrap\css\bootstrap.css" />
+    <Content Include="Home\assets\vendor\bootstrap\css\bootstrap.min.css" />
+    <Content Include="Home\assets\vendor\bootstrap\js\bootstrap.bundle.js" />
+    <Content Include="Home\assets\vendor\bootstrap\js\bootstrap.bundle.min.js" />
+    <Content Include="Home\assets\vendor\bootstrap\js\bootstrap.js" />
+    <Content Include="Home\assets\vendor\bootstrap\js\bootstrap.min.js" />
+    <Content Include="Home\assets\vendor\boxicons\css\animations.css" />
+    <Content Include="Home\assets\vendor\boxicons\css\boxicons.css" />
+    <Content Include="Home\assets\vendor\boxicons\css\boxicons.min.css" />
+    <Content Include="Home\assets\vendor\boxicons\css\transformations.css" />
+    <Content Include="Home\assets\vendor\boxicons\fonts\boxicons.svg" />
+    <Content Include="Home\assets\vendor\jquery.easing\jquery.easing.min.js" />
+    <Content Include="Home\assets\vendor\jquery\jquery.min.js" />
+    <Content Include="Home\assets\vendor\remixicon\remixicon.css" />
+    <Content Include="Home\assets\vendor\remixicon\remixicon.svg" />
+    <Content Include="Home\assets\vendor\remixicon\remixicon.symbol.svg" />
+    <Content Include="Home\default.aspx" />
+    <Content Include="Home\EasyManLogoCrop.jpg" />
     <Content Include="lib\Assets\collections\futurelead.jpg" />
     <Content Include="lib\Assets\collections\images %281%29.jpeg" />
     <Content Include="lib\Assets\collections\images %281%29.png" />
@@ -542,6 +569,13 @@
       <DependentUpon>About.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
+    <Compile Include="Home\default.aspx.designer.vb">
+      <DependentUpon>default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Home\default.aspx.vb">
+      <DependentUpon>default.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -750,6 +784,26 @@
     <Content Include="lib\Assets\collections\wealth-management-concept-business-man-260nw-1439150750.webp" />
     <Content Include="lib\Assets\collections\young-business-school-student-working-260nw-697612099.webp" />
     <Content Include="lib\bootstrap-sweetalert\sweetalert.min.css.map" />
+    <Content Include="Home\assets\vendor\bootstrap\css\bootstrap-grid.css.map" />
+    <Content Include="Home\assets\vendor\bootstrap\css\bootstrap-grid.min.css.map" />
+    <Content Include="Home\assets\vendor\bootstrap\css\bootstrap-reboot.css.map" />
+    <Content Include="Home\assets\vendor\bootstrap\css\bootstrap-reboot.min.css.map" />
+    <Content Include="Home\assets\vendor\bootstrap\css\bootstrap.css.map" />
+    <Content Include="Home\assets\vendor\bootstrap\css\bootstrap.min.css.map" />
+    <Content Include="Home\assets\vendor\bootstrap\js\bootstrap.bundle.js.map" />
+    <Content Include="Home\assets\vendor\bootstrap\js\bootstrap.bundle.min.js.map" />
+    <Content Include="Home\assets\vendor\bootstrap\js\bootstrap.js.map" />
+    <Content Include="Home\assets\vendor\bootstrap\js\bootstrap.min.js.map" />
+    <Content Include="Home\assets\vendor\boxicons\fonts\boxicons.eot" />
+    <Content Include="Home\assets\vendor\boxicons\fonts\boxicons.ttf" />
+    <Content Include="Home\assets\vendor\boxicons\fonts\boxicons.woff" />
+    <Content Include="Home\assets\vendor\boxicons\fonts\boxicons.woff2" />
+    <Content Include="Home\assets\vendor\jquery\jquery.min.map" />
+    <Content Include="Home\assets\vendor\remixicon\remixicon.eot" />
+    <Content Include="Home\assets\vendor\remixicon\remixicon.less" />
+    <Content Include="Home\assets\vendor\remixicon\remixicon.ttf" />
+    <Content Include="Home\assets\vendor\remixicon\remixicon.woff" />
+    <Content Include="Home\assets\vendor\remixicon\remixicon.woff2" />
     <None Include="My Project\Application.myapp">
       <Generator>MyApplicationCodeGenerator</Generator>
       <LastGenOutput>Application.Designer.vb</LastGenOutput>

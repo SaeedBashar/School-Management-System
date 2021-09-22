@@ -17,7 +17,7 @@ Public Class SignIn
         con.Open()
         If Statuslist.SelectedValue = 1 Then
 
-            query = "Select uname, pword,  fname, lname, admin_id from Adminpasswordtable, administrator where uname = '" & unametxt.Text & "' And pword = '" & pwordtxt.Text & "'and adm_id = admin_id"
+            query = "Select uname, pword,  fname, lname, admin_id from Adminpasswordtable, administrator where uname = '" & unametxt.Text & "' And pword = '" & Encrypt(pwordtxt.Text) & "'and adm_id = admin_id"
             cmd.CommandText = query
             cmd.Connection = con
             dr = cmd.ExecuteReader
@@ -35,7 +35,7 @@ Public Class SignIn
                 ClientScript.RegisterClientScriptBlock(Me.GetType(), "Failure", "<script type='text/javascript'>swal('User name or password is invalid')</script>")
             End If
         ElseIf Statuslist.SelectedValue = 2 Then
-            query = "Select uname,pword, fname, lname, tutor_id from Tutorpasswordtable, tutors where uname = '" & unametxt.Text & "' And pword = '" & pwordtxt.Text & "' and tutor_id = tut_id "
+            query = "Select uname,pword, fname, lname, tutor_id from Tutorpasswordtable, tutors where uname = '" & unametxt.Text & "' And pword = '" & Encrypt(pwordtxt.Text) & "' and tutor_id = tut_id "
             cmd.CommandText = query
             cmd.Connection = con
             dr = cmd.ExecuteReader
@@ -53,7 +53,7 @@ Public Class SignIn
                 ClientScript.RegisterClientScriptBlock(Me.GetType(), "Failure", "<script type='text/javascript'>swal('User name or password is invalid')</script>")
             End If
         Else
-            query = "Select uname,pword, fname,lname, student_id from StudentPasswordTable,students where uname = '" & unametxt.Text.Trim() & "' And pword = '" & pwordtxt.Text.Trim() & "' and std_id = student_id"
+            query = "Select uname,pword, fname,lname, student_id from StudentPasswordTable,students where uname = '" & unametxt.Text.Trim() & "' And pword = '" & Encrypt(pwordtxt.Text.Trim()) & "' and std_id = student_id"
             cmd.CommandText = query
             cmd.Connection = con
             dr = cmd.ExecuteReader
@@ -72,4 +72,11 @@ Public Class SignIn
         End If
     End Sub
 
+    Public Function Encrypt(password As String) As String
+        Dim strmsg As String = ""
+        Dim encode As Byte() = New Byte(password.Length - 1) {}
+        encode = Encoding.UTF8.GetBytes(password)
+        strmsg = Convert.ToBase64String(encode)
+        Return strmsg
+    End Function
 End Class

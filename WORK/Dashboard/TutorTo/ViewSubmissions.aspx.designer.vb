@@ -14,6 +14,15 @@ Option Explicit On
 Partial Public Class ViewSubmissions
     
     '''<summary>
+    '''signout control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents signout As Global.System.Web.UI.HtmlControls.HtmlAnchor
+    
+    '''<summary>
     '''searchtxt control.
     '''</summary>
     '''<remarks>

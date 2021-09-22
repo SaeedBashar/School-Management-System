@@ -91,7 +91,8 @@ Public Class ViewSubmissions
 
     Protected Sub BtnSearch_ServerClick(sender As Object, e As EventArgs)
         Dim cmd As New SqlCommand
-        Dim query As String = "select FileId, Student_id,fname, lname, sent_date from studentAssignment, students where student_id = std_id and fname like '%" & searchtxt.Text & "%'"
+        Dim query As String = "select FileId, Student_id,fname, lname, sent_date from studentAssignment, students where fname like '%" & searchtxt.Text & "%' and student_id = std_id"
+
         cmd.Connection = con
         cmd.CommandText = query
 
@@ -110,6 +111,10 @@ Public Class ViewSubmissions
     End Sub
 
     Protected Sub loguname_ServerClick(sender As Object, e As EventArgs)
+
+    End Sub
+
+    Protected Sub signout_ServerClick(sender As Object, e As EventArgs)
 
     End Sub
 End Class

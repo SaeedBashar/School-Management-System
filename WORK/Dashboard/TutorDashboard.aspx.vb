@@ -152,7 +152,7 @@ Public Class TutorDashboard
     End Sub
 
     Protected Sub annouceview_ServerClick(sender As Object, e As EventArgs)
-
+        Response.Redirect("TutorTo/TutorViewAnnouncement.aspx?tut_id" + Request.QueryString("tutor_id"))
     End Sub
 
     Protected Sub signout_ServerClick(sender As Object, e As EventArgs)
@@ -166,5 +166,9 @@ Public Class TutorDashboard
         Con.Close()
 
         Response.Redirect("../SignIn.aspx")
+    End Sub
+
+    Protected Sub eventeview_ServerClick(sender As Object, e As EventArgs)
+        Response.Redirect("TutorTo/TutorViewEvent.aspx?tut_id=" + Request.QueryString("tutor_id"))
     End Sub
 End Class

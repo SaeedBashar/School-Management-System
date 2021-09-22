@@ -61,69 +61,33 @@
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#">
-                                    <span data-feather="home"></span>
-                                    Site Home
-            </a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">
-                                    <span class="ti-calendar"></span>
-                                    Calender
-            </a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">
+                                <a class="nav-link" href="#" data-toggle="modal" data-target="#staticBackdrop">
                                     <span data-feather="file"></span>
-                                    Private Files
+                                    Add Assignments
             </a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#">
+                                <a class="nav-link" href="TutorTo/ViewSubmissions.aspx">
+                                    <span data-feather="file"></span>
+                                    View Submissios
+            </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="TutorTo/TutorViewAnnouncement.aspx">
+                                    <span data-feather="file"></span>
+                                    Announcements
+            </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="TutorTo/TutorViewEvent.aspx">
                                     <span data-feather="layers"></span>
-                                    My Courses
+                                    Upcoming Events
             </a>
                             </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">
-                                    <span data-feather="bar-chart-2"></span>
-                                    Private
-            </a>
-                            </li>
+                            
                         </ul>
 
-                        <h6 class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-muted">
-                            <span>Saved reports</span>
-                            <a class="d-flex align-items-center text-muted" href="#grade" aria-label="Add a new report">
-                                <span data-feather="plus-circle"></span>
-                            </a>
-                        </h6>
-                        <ul class="nav flex-column mb-2">
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">
-                                    <span data-feather="file-text"></span>
-                                    Current month
-            </a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">
-                                    <span data-feather="file-text"></span>
-                                    Last quarter
-            </a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">
-                                    <span data-feather="file-text"></span>
-                                    Social engagement
-            </a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">
-                                    <span data-feather="file-text"></span>
-                                    Year-end sale
-            </a>
-                            </li>
-                        </ul>
+                       
                     </div>
                 </nav>
 
@@ -190,7 +154,7 @@
                                             <img src="../lib/Assets/img/table_icons/announcement2.png" width="30" height="30" />
                                         </h5>
                                         <p class="card-text">View currently updated announcements</p>
-                                        <!-- Trigger Modal -->
+                                        
                                         <a href="#" runat="server" onserverclick="annouceview_ServerClick" id="annouceview" class="btn btn-primary"><span class="ti-arrow-left"></span>View <span class="ti-arrow-right"></span></a>
                                     </div>
                                 </div>
@@ -204,8 +168,8 @@
                                         <h5 class="card-title">
                                             <img src="../lib/Assets/img/table_icons/administrator.png" />
                                         </h5>
-                                        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                                        <a href="#" runat="server" id="socialview" onserverclick="socialview_ServerClick" class="btn btn-primary"><span class="ti-arrow-left"></span>View <span class="ti-arrow-right"></span></a>
+                                        <p class="card-text">View the upcoming events of the school</p>
+                                        <a href="#" runat="server" id="eventeview" onserverclick="eventeview_ServerClick" class="btn btn-primary"><span class="ti-arrow-left"></span>View <span class="ti-arrow-right"></span></a>
                                     </div>
                                 </div>
                             </div>

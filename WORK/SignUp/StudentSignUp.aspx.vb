@@ -17,31 +17,68 @@ Public Class StudentSignUp
         Dim guardian As String = guardiantxt.Text
         Dim guardiancontact As String = guardiancontacttxt.Text
         Dim gender As String
-        If maleradio.Checked Then
-            gender = "Male"
-        Else
-            gender = "Female"
-        End If
-        con.Open()
-        Dim cmd As New SqlCommand
-        cmd.Connection = con
-
-        Dim query As String = "Insert into Students(fname, lname, mname, dob, gender, email, guardian_name, guardian_contact) values ('" & fname & "', '" & lname & "', '" & mname & "', '" & dob & "', '" & gender & "', '" & emailt & "', '" & guardian & "', '" & guardiancontact & "')"
-        cmd.CommandText = query
-        cmd.ExecuteNonQuery()
         Try
-            query = "Insert into StudentPasswordTable(uname, pword) values ('" & uname & "', '" & pword & "')"
+            If maleradio.Checked Then
+                gender = "Male"
+            Else
+                gender = "Female"
+            End If
+            con.Open()
+            Dim cmd As New SqlCommand
+            cmd.Connection = con
+
+            Dim query As String = "Insert into Students(fname, lname, mname, dob, gender, email, guardian_name, guardian_contact) values ('" & fname & "', '" & lname & "', '" & mname & "', '" & dob & "', '" & gender & "', '" & emailt & "', '" & guardian & "', '" & guardiancontact & "')"
+            cmd.CommandText = query
+            cmd.ExecuteNonQuery()
+            con.Close()
+
+            'query for the id of the new admin
+            Dim sdr As SqlDataReader
+            query = "select * from Students where email ='" & emailt & "'"
+            con.Open()
+            cmd.CommandText = query
+            sdr = cmd.ExecuteReader
+            sdr.Read()
+            Dim key As Integer = sdr("student_id")
+            sdr.Close()
+
+            query = "Insert into StudentPasswordTable(uname, pword, std_id, loginStatus ) values ('" & uname & "', '" & Encrypt(pword) & "', '" & getUserId(emailt) & "', '0')"
             cmd.CommandText = query
             cmd.ExecuteNonQuery()
 
-
+            con.Close()
         Catch ex As Exception
-            MsgBox("Error")
-            Response.Redirect("../SignIn.aspx")
+            ClientScript.RegisterClientScriptBlock(Me.GetType(), "failure", "<script>swal('An Error Occured!!'); window.location = '../SignIn.aspx';</script>")
+
         End Try
 
-        Response.Redirect("../Dashboard/StudentDashboard.aspx")
-
+        ClientScript.RegisterClientScriptBlock(Me.GetType(), "success", "<script>swal('SignUp Successfully!!');window.location = '../SignIn.aspx';</script>")
 
     End Sub
+
+    Public Function Encrypt(password As String) As String
+        Dim strmsg As String = ""
+        Dim encode As Byte() = New Byte(password.Length - 1) {}
+        encode = Encoding.UTF8.GetBytes(password)
+        strmsg = Convert.ToBase64String(encode)
+        Return strmsg
+    End Function
+
+    Public Function getUserId(str As String) As Integer
+        Dim key As Integer
+        Dim cmd As New SqlCommand
+        Dim query As String = "select Student_id from students where email = '" & str & "'"
+        Dim sdr As SqlDataReader
+
+        cmd.Connection = con
+        cmd.CommandText = query
+        sdr = cmd.ExecuteReader
+        sdr.Read()
+        key = sdr(0)
+        sdr.Close()
+
+
+        Return key
+
+    End Function
 End Class
